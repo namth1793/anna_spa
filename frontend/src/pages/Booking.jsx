@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
-import { FaCheck, FaPhone } from 'react-icons/fa';
+import { IconCheck, IconPhone } from '../components/Icons';
 
 const SERVICES = [
   'Thai Massage', 'Hot Stone Massage', 'Bamboo Massage', 'Aroma Therapy',
@@ -106,7 +106,7 @@ export default function Booking() {
               <ul className="space-y-3">
                 {Array.isArray(notes) && notes.map((note, i) => (
                   <li key={i} className="flex gap-2 text-sm text-dark-400">
-                    <FaCheck className="text-gold shrink-0 mt-0.5" size={11} />
+                    <IconCheck className="text-gold shrink-0 mt-0.5" size={11} />
                     {note}
                   </li>
                 ))}
@@ -117,7 +117,7 @@ export default function Booking() {
               <p className="text-dark-300 text-sm text-center">
                 {t('booking.needAdvice')}<br />
                 <a href="tel:+84901905991" className="text-gold font-semibold text-base hover:text-gold-300 transition-colors flex items-center justify-center gap-2 mt-2">
-                  <FaPhone size={12} /> +84 90 190 59 91
+                  <IconPhone size={12} /> +84 90 190 59 91
                 </a>
               </p>
             </div>
@@ -128,7 +128,7 @@ export default function Booking() {
             {status === 'success' ? (
               <div className="text-center py-16 border border-gold/30 bg-gold/5">
                 <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  <FaCheck className="text-dark-950 text-2xl" />
+                  <IconCheck className="text-dark-950 text-2xl" />
                 </div>
                 <h3 className="font-playfair text-2xl text-white mb-3">{t('booking.successTitle')}</h3>
                 <p className="text-dark-300 text-sm max-w-sm mx-auto mb-8">{msg}</p>

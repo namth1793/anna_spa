@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa';
+import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconInstagram, IconTripadvisor } from './Icons';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -20,14 +20,14 @@ export default function Footer() {
           <div className="flex gap-3">
             <a href="https://www.facebook.com/dragonspadanang/" target="_blank" rel="noopener noreferrer"
               className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
-              <FaFacebook size={14} />
+              <IconFacebook size={14} />
             </a>
             <a href="#" className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
-              <FaInstagram size={14} />
+              <IconInstagram size={14} />
             </a>
             <a href="https://www.tripadvisor.com/Attraction_Review-g298085-d24191320-Reviews-Dragon_Spa_DaNang-Da_Nang.html" target="_blank" rel="noopener noreferrer"
               className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
-              <FaTripadvisor size={14} />
+              <IconTripadvisor size={14} />
             </a>
           </div>
         </div>
@@ -75,21 +75,21 @@ export default function Footer() {
           <div className="w-10 h-px bg-gold mb-5" />
           <ul className="space-y-4">
             <li className="flex gap-3 text-sm text-dark-300">
-              <FaMapMarkerAlt className="text-gold mt-0.5 shrink-0" />
+              <IconMapPin className="text-gold mt-0.5 shrink-0" size={14} />
               <span>28 An Thượng 26, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng</span>
             </li>
             <li>
               <a href="tel:+84901905991" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
-                <FaPhone className="text-gold mt-0.5 shrink-0" />+84 90 190 59 91
+                <IconPhone className="text-gold mt-0.5 shrink-0" size={14} />+84 90 190 59 91
               </a>
             </li>
             <li>
               <a href="mailto:annaspa.danang@gmail.com" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
-                <FaEnvelope className="text-gold mt-0.5 shrink-0" />annaspa.danang@gmail.com
+                <IconEnvelope className="text-gold mt-0.5 shrink-0" size={14} />annaspa.danang@gmail.com
               </a>
             </li>
             <li className="flex gap-3 text-sm text-dark-300">
-              <FaClock className="text-gold mt-0.5 shrink-0" />
+              <IconClock className="text-gold mt-0.5 shrink-0" size={14} />
               <span>09:00 – 23:00 | Mon – Sun</span>
             </li>
           </ul>

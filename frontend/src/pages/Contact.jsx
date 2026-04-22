@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTripadvisor, FaCheck } from 'react-icons/fa';
+import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconTripadvisor, IconCheck } from '../components/Icons';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -58,7 +58,7 @@ export default function Contact() {
             <ul className="space-y-6 mb-10">
               <li className="flex gap-4">
                 <div className="w-10 h-10 border border-gold/40 flex items-center justify-center shrink-0">
-                  <FaMapMarkerAlt className="text-gold" size={14} />
+                  <IconMapPin className="text-gold" size={14} />
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.address_label')}</p>
@@ -75,7 +75,7 @@ export default function Contact() {
               </li>
               <li className="flex gap-4">
                 <div className="w-10 h-10 border border-gold/40 flex items-center justify-center shrink-0">
-                  <FaPhone className="text-gold" size={14} />
+                  <IconPhone className="text-gold" size={14} />
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.phone_label')}</p>
@@ -84,7 +84,7 @@ export default function Contact() {
               </li>
               <li className="flex gap-4">
                 <div className="w-10 h-10 border border-gold/40 flex items-center justify-center shrink-0">
-                  <FaEnvelope className="text-gold" size={14} />
+                  <IconEnvelope className="text-gold" size={14} />
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.email_label')}</p>
@@ -93,7 +93,7 @@ export default function Contact() {
               </li>
               <li className="flex gap-4">
                 <div className="w-10 h-10 border border-gold/40 flex items-center justify-center shrink-0">
-                  <FaClock className="text-gold" size={14} />
+                  <IconClock className="text-gold" size={14} />
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.hours_label')}</p>
@@ -109,7 +109,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 border border-dark-700 px-4 py-2 text-sm text-dark-400 hover:border-gold hover:text-gold transition-colors"
               >
-                <FaFacebook /> Facebook
+                <IconFacebook /> Facebook
               </a>
               <a
                 href="https://www.tripadvisor.com/Attraction_Review-g298085-d24191320-Reviews-Dragon_Spa_DaNang-Da_Nang.html"
@@ -117,7 +117,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 border border-dark-700 px-4 py-2 text-sm text-dark-400 hover:border-gold hover:text-gold transition-colors"
               >
-                <FaTripadvisor /> TripAdvisor
+                <IconTripadvisor /> TripAdvisor
               </a>
             </div>
 
@@ -141,7 +141,7 @@ export default function Contact() {
             {status === 'success' ? (
               <div className="text-center py-16 border border-gold/30 bg-gold/5">
                 <div className="w-14 h-14 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
-                  <FaCheck className="text-dark-950 text-xl" />
+                  <IconCheck className="text-dark-950 text-xl" />
                 </div>
                 <h3 className="font-playfair text-xl text-white mb-2">{t('contact.successTitle')}</h3>
                 <p className="text-dark-300 text-sm">{msg}</p>

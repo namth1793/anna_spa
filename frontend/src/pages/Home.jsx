@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
 import {
-  FaStar, FaQuoteLeft, FaLeaf, FaFire, FaSpa, FaHands,
-  FaPhone, FaMapMarkerAlt, FaClock, FaChevronLeft, FaChevronRight, FaAward
-} from 'react-icons/fa';
+  IconStar, IconQuote, IconLeaf, IconFlame, IconSpa, IconHands,
+  IconPhone, IconMapPin, IconClock, IconChevronLeft, IconChevronRight, IconAward
+} from '../components/Icons';
 
 const HERO_IMGS = [
   'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80',
@@ -36,12 +36,12 @@ export default function Home() {
   ];
 
   const SERVICES = [
-    { icon: <FaHands className="text-3xl text-gold" />, title: 'Thai Massage', desc: t('services.thai_desc'), price: 'Từ 420.000đ', duration: '60 phút' },
-    { icon: <FaFire className="text-3xl text-gold" />, title: 'Hot Stone Massage', desc: t('services.stone_desc'), price: 'Từ 500.000đ', duration: '60 phút' },
-    { icon: <FaLeaf className="text-3xl text-gold" />, title: 'Herbal Treatment', desc: t('services.herbal_desc'), price: 'Từ 460.000đ', duration: '60 phút' },
-    { icon: <FaSpa className="text-3xl text-gold" />, title: 'Aroma Therapy', desc: t('services.aroma_desc'), price: 'Từ 480.000đ', duration: '60 phút' },
-    { icon: <FaHands className="text-3xl text-gold" />, title: 'Bamboo Massage', desc: t('services.bamboo_desc'), price: 'Từ 450.000đ', duration: '60 phút' },
-    { icon: <FaSpa className="text-3xl text-gold" />, title: 'Facial Treatment', desc: t('services.facial_desc'), price: 'Từ 550.000đ', duration: '60 phút' },
+    { icon: <IconHands className="text-3xl text-gold" />, title: 'Thai Massage', desc: t('services.thai_desc'), price: 'Từ 420.000đ', duration: '60 phút' },
+    { icon: <IconFlame className="text-3xl text-gold" />, title: 'Hot Stone Massage', desc: t('services.stone_desc'), price: 'Từ 500.000đ', duration: '60 phút' },
+    { icon: <IconLeaf className="text-3xl text-gold" />, title: 'Herbal Treatment', desc: t('services.herbal_desc'), price: 'Từ 460.000đ', duration: '60 phút' },
+    { icon: <IconSpa className="text-3xl text-gold" />, title: 'Aroma Therapy', desc: t('services.aroma_desc'), price: 'Từ 480.000đ', duration: '60 phút' },
+    { icon: <IconHands className="text-3xl text-gold" />, title: 'Bamboo Massage', desc: t('services.bamboo_desc'), price: 'Từ 450.000đ', duration: '60 phút' },
+    { icon: <IconSpa className="text-3xl text-gold" />, title: 'Facial Treatment', desc: t('services.facial_desc'), price: 'Từ 550.000đ', duration: '60 phút' },
   ];
 
   const STATS = [
@@ -147,7 +147,7 @@ export default function Home() {
             <p className="text-dark-300 leading-relaxed mb-8">{t('welcome.p3')}</p>
             <div className="flex items-center gap-4 mb-8">
               <div className="flex text-gold gap-0.5">
-                {[...Array(5)].map((_, i) => <FaStar key={i} size={16} />)}
+                {[...Array(5)].map((_, i) => <IconStar key={i} size={16} />)}
               </div>
               <span className="text-dark-300 text-sm">{t('welcome.rating')}</span>
             </div>
@@ -275,10 +275,10 @@ export default function Home() {
 
           {testimony && (
             <div className="relative">
-              <FaQuoteLeft className="text-gold/20 text-8xl absolute -top-4 -left-4" />
+              <IconQuote className="text-gold/20 text-8xl absolute -top-4 -left-4" />
               <div className="bg-dark-800 border border-dark-700 p-10 md:p-14 text-center relative">
                 <div className="flex justify-center gap-1 mb-6">
-                  {[...Array(testimony.rating)].map((_, i) => <FaStar key={i} className="text-gold" size={18} />)}
+                  {[...Array(testimony.rating)].map((_, i) => <IconStar key={i} className="text-gold" size={18} />)}
                 </div>
                 <p className="text-dark-200 text-base md:text-lg leading-relaxed italic mb-8 font-light">
                   "{testimony.content}"
@@ -295,7 +295,7 @@ export default function Home() {
           {testimonials.length > 1 && (
             <div className="flex items-center justify-center gap-6 mt-8">
               <button onClick={prevT} className="w-10 h-10 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
-                <FaChevronLeft size={12} />
+                <IconChevronLeft size={12} />
               </button>
               <div className="flex gap-2">
                 {testimonials.map((_, i) => (
@@ -307,14 +307,14 @@ export default function Home() {
                 ))}
               </div>
               <button onClick={nextT} className="w-10 h-10 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
-                <FaChevronRight size={12} />
+                <IconChevronRight size={12} />
               </button>
             </div>
           )}
 
           <div className="flex justify-center mt-8">
             <div className="flex items-center gap-2 text-sm text-dark-400">
-              <FaAward className="text-gold" />
+              <IconAward className="text-gold" />
               <span>{t('testimonials.award')}</span>
             </div>
           </div>
@@ -337,7 +337,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/dat-lich" className="btn-gold">{t('cta.bookOnline')}</Link>
             <a href="tel:+84901905991" className="btn-outline-gold flex items-center justify-center gap-2">
-              <FaPhone size={12} /> {t('cta.callNow')}
+              <IconPhone size={12} /> {t('cta.callNow')}
             </a>
           </div>
         </div>
@@ -347,21 +347,21 @@ export default function Home() {
       <section className="py-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-8 items-center">
           <div className="flex items-start gap-4">
-            <FaMapMarkerAlt className="text-gold text-2xl mt-1 shrink-0" />
+            <IconMapPin className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.address_label')}</h4>
               <p className="text-dark-400 text-sm">{t('info.address')}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <FaClock className="text-gold text-2xl mt-1 shrink-0" />
+            <IconClock className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.hours_label')}</h4>
               <p className="text-dark-400 text-sm">{t('info.hours')}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <FaPhone className="text-gold text-2xl mt-1 shrink-0" />
+            <IconPhone className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.contact_label')}</h4>
               <a href="tel:+84901905991" className="text-dark-400 text-sm hover:text-gold transition-colors block">+84 90 190 59 91</a>

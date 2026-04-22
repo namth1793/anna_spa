@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaTimes } from 'react-icons/fa';
+import { IconClose } from '../components/Icons';
 
 const PHOTOS = [
   { src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=75', cat: 'space', caption: 'Phòng trị liệu đá nóng sang trọng' },
@@ -98,7 +98,7 @@ export default function Gallery() {
             className="absolute top-6 right-6 text-white hover:text-gold transition-colors"
             onClick={() => setLightbox(null)}
           >
-            <FaTimes size={24} />
+            <IconClose size={24} />
           </button>
           <img
             src={lightbox.src}
