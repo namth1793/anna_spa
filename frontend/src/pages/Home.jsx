@@ -129,7 +129,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1535274336009-3d4e1e12fd35?w=800&q=80"
+              src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80"
               alt="Anna Spa interior"
               className="w-full h-[500px] object-cover"
             />
