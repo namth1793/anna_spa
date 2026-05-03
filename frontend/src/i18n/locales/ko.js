@@ -5,6 +5,7 @@ export default {
       booking: '예약', contact: '문의',
       openHours: '영업시간: 09:00 – 23:00 | 월~일',
       bookNow: '지금 예약',
+      price: '가격표',
     },
     hero: {
       brand: '안나 스파 다낭',
@@ -130,6 +131,43 @@ export default {
       desc: '베트남 전통 및 국제 스파 테라피로 진정한 휴식을 경험하세요. 전문 테라피스트, 럭셔리하고 고요한 환경.',
       explore: '탐색', servicesTitle: '인기 서비스', contactTitle: '연락처',
       rights: 'Anna Spa Da Nang. All rights reserved.', bookNow: '지금 예약',
+    },
+    priceList: {
+      label: '가격표', title: '서비스 가격표',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
+      hours: '오전 9:00 – 오후 11:30',
+      bonus: '핫스톤 무료',
+      minUnit: '분', vndUnit: '동',
+      comboTitle: '시그니처 콤보',
+      comboIncludesLabel: '포함 내용:',
+      comboIncludes: ['발 케어 + 왁싱 + 네일 케어', '아로마 + 핫스톤 + 허브', 'THANN 오리엔탈 오일'],
+      sections: [
+        {
+          icon: '💆', title: '마사지 서비스',
+          services: [
+            { name: '안나 마사지 (타이 + 아로마)', options: [{dur: 90, price: '500,000'}, {dur: 120, price: '630,000'}] },
+            { name: '전신 아로마 마사지', options: [{dur: 60, price: '330,000'}, {dur: 90, price: '430,000'}, {dur: 120, price: '530,000'}] },
+            { name: '타이 마사지', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '600,000'}] },
+            { name: '포핸드 마사지', options: [{dur: 60, price: '650,000'}, {dur: 90, price: '850,000'}, {dur: 120, price: '1,050,000'}] },
+            { name: '등 마사지', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}] },
+          ],
+        },
+        {
+          icon: '👣', title: '발 관리',
+          services: [
+            { name: '발 아로마 마사지', options: [{dur: 60, price: '300,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: '발 각질 제거 (Foot Scrub)', options: [{dur: 30, price: '150,000'}, {dur: 60, price: '300,000'}] },
+          ],
+        },
+        {
+          icon: '👶', title: '기타 서비스',
+          services: [
+            { name: '키즈 마사지 / 베이비시터', options: [{dur: 60, price: '290,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: '임산부 마사지', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '560,000'}] },
+          ],
+        },
+      ],
+      combo: { options: [{dur: 100, price: '820,000'}, {dur: 140, price: '1,000,000'}] },
     },
   },
 };

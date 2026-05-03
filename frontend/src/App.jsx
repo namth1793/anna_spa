@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Booking from './pages/Booking';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import PriceList from './pages/PriceList';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
@@ -22,6 +23,7 @@ function MainLayout() {
           <Route path="/dat-lich" element={<Booking />} />
           <Route path="/thu-vien-anh" element={<Gallery />} />
           <Route path="/lien-he" element={<Contact />} />
+          <Route path="/bang-gia" element={<PriceList />} />
         </Routes>
       </main>
       <Footer />

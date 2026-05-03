@@ -5,6 +5,7 @@ export default {
       booking: 'Đặt Lịch', contact: 'Liên Hệ',
       openHours: 'Mở cửa: 09:00 – 23:00 | Thứ 2 – Chủ Nhật',
       bookNow: 'Đặt Lịch Ngay',
+      price: 'Bảng Giá',
     },
     hero: {
       brand: 'Anna Spa Đà Nẵng',
@@ -132,6 +133,43 @@ export default {
       desc: 'Trải nghiệm thư giãn đích thực với các liệu pháp spa truyền thống Việt Nam và quốc tế. Đội ngũ chuyên trị liệu chuyên nghiệp, không gian sang trọng và yên tĩnh.',
       explore: 'Khám Phá', servicesTitle: 'Dịch Vụ Nổi Bật', contactTitle: 'Liên Hệ',
       rights: 'Anna Spa Da Nang. All rights reserved.', bookNow: 'Đặt Lịch Ngay',
+    },
+    priceList: {
+      label: 'Bảng Giá', title: 'Bảng Giá Dịch Vụ',
+      address: '11A Trần Quốc Toản, Hải Châu, Đà Nẵng',
+      hours: '9:00 SA – 11:30 CH',
+      bonus: 'Miễn phí xông hơi (Hotstone free)',
+      minUnit: 'phút', vndUnit: 'VND',
+      comboTitle: 'Combo Signature',
+      comboIncludesLabel: 'Bao gồm:',
+      comboIncludes: ['Ngâm chân + đắp mặt + tẩy lông + chăm sóc móng', 'Đá nóng + thảo dược', 'Dầu body cao cấp (THANN – Oriental)'],
+      sections: [
+        {
+          icon: '💆', title: 'Dịch Vụ Massage',
+          services: [
+            { name: 'Massage Anna (Mixed Thái + Aroma)', options: [{dur: 90, price: '500.000'}, {dur: 120, price: '630.000'}] },
+            { name: 'Massage Aroma Toàn Thân', options: [{dur: 60, price: '330.000'}, {dur: 90, price: '430.000'}, {dur: 120, price: '530.000'}] },
+            { name: 'Massage Thái', options: [{dur: 60, price: '340.000'}, {dur: 90, price: '470.000'}, {dur: 120, price: '600.000'}] },
+            { name: 'Massage Đá Nóng (Fourhand)', options: [{dur: 60, price: '650.000'}, {dur: 90, price: '850.000'}, {dur: 120, price: '1.050.000'}] },
+            { name: 'Massage Lưng', options: [{dur: 60, price: '340.000'}, {dur: 90, price: '470.000'}] },
+          ],
+        },
+        {
+          icon: '👣', title: 'Chăm Sóc Chân & Đặc Biệt',
+          services: [
+            { name: 'Foot Aroma Massage', options: [{dur: 60, price: '300.000'}, {dur: 90, price: '400.000'}, {dur: 120, price: '500.000'}] },
+            { name: 'Tẩy Tế Bào Chết Chân (Foot Scrub)', options: [{dur: 30, price: '150.000'}, {dur: 60, price: '300.000'}] },
+          ],
+        },
+        {
+          icon: '👶', title: 'Dịch Vụ Khác',
+          services: [
+            { name: 'Massage Trẻ Em / Trông Trẻ', options: [{dur: 60, price: '290.000'}, {dur: 90, price: '400.000'}, {dur: 120, price: '500.000'}] },
+            { name: 'Massage Bầu', options: [{dur: 60, price: '340.000'}, {dur: 90, price: '470.000'}, {dur: 120, price: '560.000'}] },
+          ],
+        },
+      ],
+      combo: { options: [{dur: 100, price: '820.000'}, {dur: 140, price: '1.000.000'}] },
     },
   },
 };

@@ -5,6 +5,7 @@ export default {
       booking: '予約', contact: 'お問い合わせ',
       openHours: '営業時間: 09:00 – 23:00 | 月〜日',
       bookNow: '今すぐ予約',
+      price: '料金表',
     },
     hero: {
       brand: 'アナ スパ ダナン',
@@ -130,6 +131,43 @@ export default {
       desc: 'ベトナムと国際的な伝統スパセラピーで本物のリラクゼーションを体験してください。プロのセラピスト、豪華で静寂な環境。',
       explore: '探索', servicesTitle: '人気サービス', contactTitle: 'お問い合わせ',
       rights: 'Anna Spa Da Nang. All rights reserved.', bookNow: '今すぐ予約',
+    },
+    priceList: {
+      label: '料金表', title: 'サービス料金表',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
+      hours: '午前9:00 – 午後11:30',
+      bonus: 'ホットストーン無料',
+      minUnit: '分', vndUnit: 'VND',
+      comboTitle: 'シグネチャーコンボ',
+      comboIncludesLabel: '含まれるもの:',
+      comboIncludes: ['フットケア + フェイスマスク + ムダ毛処理 + ネイルケア', 'アロマ + ホットストーン + ハーブ療法', 'THANNオリエンタルオイル'],
+      sections: [
+        {
+          icon: '💆', title: 'マッサージサービス',
+          services: [
+            { name: 'アンナマッサージ（タイ + アロマ）', options: [{dur: 90, price: '500,000'}, {dur: 120, price: '630,000'}] },
+            { name: 'ボディアロママッサージ', options: [{dur: 60, price: '330,000'}, {dur: 90, price: '430,000'}, {dur: 120, price: '530,000'}] },
+            { name: 'タイマッサージ', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '600,000'}] },
+            { name: 'フォーハンドマッサージ', options: [{dur: 60, price: '650,000'}, {dur: 90, price: '850,000'}, {dur: 120, price: '1,050,000'}] },
+            { name: 'バックマッサージ', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}] },
+          ],
+        },
+        {
+          icon: '👣', title: 'フットケア',
+          services: [
+            { name: 'フットアロママッサージ', options: [{dur: 60, price: '300,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: 'フットスクラブ', options: [{dur: 30, price: '150,000'}, {dur: 60, price: '300,000'}] },
+          ],
+        },
+        {
+          icon: '👶', title: 'その他のサービス',
+          services: [
+            { name: 'キッズマッサージ / ベビーシッター', options: [{dur: 60, price: '290,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: 'マタニティマッサージ', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '560,000'}] },
+          ],
+        },
+      ],
+      combo: { options: [{dur: 100, price: '820,000'}, {dur: 140, price: '1,000,000'}] },
     },
   },
 };

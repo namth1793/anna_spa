@@ -5,6 +5,7 @@ export default {
       booking: 'Book Now', contact: 'Contact',
       openHours: 'Open: 09:00 – 23:00 | Mon – Sun',
       bookNow: 'Book Now',
+      price: 'Price List',
     },
     hero: {
       brand: 'Anna Spa Da Nang',
@@ -130,6 +131,43 @@ export default {
       desc: 'Experience genuine relaxation with traditional Vietnamese and international spa therapies. Professional therapists, luxurious and serene environment.',
       explore: 'Explore', servicesTitle: 'Featured Services', contactTitle: 'Contact',
       rights: 'Anna Spa Da Nang. All rights reserved.', bookNow: 'Book Now',
+    },
+    priceList: {
+      label: 'Price List', title: 'Service Price List',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
+      hours: '9:00 AM – 11:30 PM',
+      bonus: 'Hotstone is free',
+      minUnit: 'mins', vndUnit: 'VND',
+      comboTitle: 'Signature Combo',
+      comboIncludesLabel: 'Includes:',
+      comboIncludes: ['Foot scrub, foot mask, waxing, nail care', 'Aroma hotstone & herbal therapy', 'THANN Oriental body oil'],
+      sections: [
+        {
+          icon: '💆', title: 'Massage Services',
+          services: [
+            { name: 'Anna Massage (Mixed Thai + Aroma)', options: [{dur: 90, price: '500,000'}, {dur: 120, price: '630,000'}] },
+            { name: 'Body Aroma Massage', options: [{dur: 60, price: '330,000'}, {dur: 90, price: '430,000'}, {dur: 120, price: '530,000'}] },
+            { name: 'Thai Massage', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '600,000'}] },
+            { name: 'Four-hand Massage', options: [{dur: 60, price: '650,000'}, {dur: 90, price: '850,000'}, {dur: 120, price: '1,050,000'}] },
+            { name: 'Back Massage', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}] },
+          ],
+        },
+        {
+          icon: '👣', title: 'Foot Care',
+          services: [
+            { name: 'Foot Aroma Massage', options: [{dur: 60, price: '300,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: 'Foot Scrub', options: [{dur: 30, price: '150,000'}, {dur: 60, price: '300,000'}] },
+          ],
+        },
+        {
+          icon: '👶', title: 'Other Services',
+          services: [
+            { name: 'Kid Massage / Babysitter', options: [{dur: 60, price: '290,000'}, {dur: 90, price: '400,000'}, {dur: 120, price: '500,000'}] },
+            { name: 'Pregnancy Massage', options: [{dur: 60, price: '340,000'}, {dur: 90, price: '470,000'}, {dur: 120, price: '560,000'}] },
+          ],
+        },
+      ],
+      combo: { options: [{dur: 100, price: '820,000'}, {dur: 140, price: '1,000,000'}] },
     },
   },
 };
