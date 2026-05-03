@@ -12,6 +12,7 @@ app.use(express.json());
 // Auto-seed on startup
 require('./db/seed');
 
+app.use('/api/auth', require('./routes/auth'));
 app.use('/api/bookings', require('./routes/bookings'));
 app.use('/api/testimonials', require('./routes/testimonials'));
 app.use('/api/contact', require('./routes/contact'));

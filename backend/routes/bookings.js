@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db/init');
+const auth = require('../middleware/auth');
 
 router.post('/', (req, res) => {
   const { name, phone, email, service, duration, date, time, notes } = req.body;
@@ -15,15 +16,20 @@ router.post('/', (req, res) => {
   res.status(201).json({ id: result.lastInsertRowid, message: 'Đặt lịch thành công! Chúng tôi sẽ liên hệ xác nhận sớm nhất.' });
 });
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
   const rows = db.prepare('SELECT * FROM bookings ORDER BY created_at DESC').all();
   res.json(rows);
 });
 
-router.patch('/:id/status', (req, res) => {
+router.patch('/:id/status', auth, (req, res) => {
   const { status } = req.body;
   db.prepare('UPDATE bookings SET status = ? WHERE id = ?').run(status, req.params.id);
   res.json({ message: 'Updated' });
+});
+
+router.delete('/:id', auth, (req, res) => {
+  db.prepare('DELETE FROM bookings WHERE id = ?').run(req.params.id);
+  res.json({ message: 'Deleted' });
 });
 
 module.exports = router;

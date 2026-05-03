@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db/init');
+const auth = require('../middleware/auth');
 
 router.post('/', (req, res) => {
   const { name, email, phone, subject, message } = req.body;
@@ -15,9 +16,14 @@ router.post('/', (req, res) => {
   res.status(201).json({ message: 'Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong vòng 24 giờ.' });
 });
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
   const rows = db.prepare('SELECT * FROM contacts ORDER BY created_at DESC').all();
   res.json(rows);
+});
+
+router.delete('/:id', auth, (req, res) => {
+  db.prepare('DELETE FROM contacts WHERE id = ?').run(req.params.id);
+  res.json({ message: 'Deleted' });
 });
 
 module.exports = router;

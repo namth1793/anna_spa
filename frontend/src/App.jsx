@@ -1,17 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import AdminRoute from './components/AdminRoute';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Booking from './pages/Booking';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import ScrollToTop from './components/ScrollToTop';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
-export default function App() {
+function MainLayout() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
+    <>
       <Navbar />
       <main>
         <Routes>
@@ -23,6 +25,19 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+        <Route path="*" element={<MainLayout />} />
+      </Routes>
     </BrowserRouter>
   );
 }
