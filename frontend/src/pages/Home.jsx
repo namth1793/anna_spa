@@ -8,12 +8,16 @@ import {
 } from '../components/Icons';
 
 const HERO_IMGS = [
+  '/slide1.jpg',
+  '/slide2.jpg',
   'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80',
   'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80',
   'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80',
 ];
 
 const GALLERY = [
+  '/slide1.jpg',
+  '/slide2.jpg',
   'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
   'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80',
   'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80',
@@ -33,6 +37,8 @@ export default function Home() {
     { bg: HERO_IMGS[0], title: t('hero.s1_title'), sub: t('hero.s1_sub') },
     { bg: HERO_IMGS[1], title: t('hero.s2_title'), sub: t('hero.s2_sub') },
     { bg: HERO_IMGS[2], title: t('hero.s3_title'), sub: t('hero.s3_sub') },
+    { bg: HERO_IMGS[3], title: t('hero.s1_title'), sub: t('hero.s1_sub') },
+    { bg: HERO_IMGS[4], title: t('hero.s2_title'), sub: t('hero.s2_sub') },
   ];
 
   const SERVICES = [
@@ -129,7 +135,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80"
+              src="/banner.jpg"
               alt="Anna Spa interior"
               className="w-full h-[500px] object-cover"
             />
