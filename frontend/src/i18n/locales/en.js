@@ -92,6 +92,8 @@ export default {
       relax_desc: 'Thai Massage 60 min + Foot Massage 30 min + Herbal tea. The perfect relaxation package for a complete afternoon.',
       royal_desc: 'Hot Stone Massage 90 min + Classic Facial 45 min + Body Scrub 30 min + Herbal welcome ritual. A complete royal experience.',
       couple_desc: 'For couples: 2x Aromatherapy Massage 90 min in a private couple room + welcome drinks + herbal bath.',
+      anna_name: 'Anna Massage', relax_name: 'Anna Relaxation Package',
+      royal_name: 'Anna Royal Package', couple_name: 'Couples Spa Package',
       min: 'min',
     },
     booking: {

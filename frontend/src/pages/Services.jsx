@@ -8,49 +8,49 @@ export default function Services() {
     {
       category: t('servicesPage.cat_massage'), emoji: '💆',
       items: [
-        { name: t('servicesPage.thai_name'), desc: t('servicesPage.thai_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '420.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '600.000đ' }, { label: `120 ${t('servicesPage.min')}`, price: '780.000đ' }] },
-        { name: t('servicesPage.stone_name'), desc: t('servicesPage.stone_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000đ' }, { label: `120 ${t('servicesPage.min')}`, price: '900.000đ' }] },
-        { name: t('servicesPage.bamboo_name'), desc: t('servicesPage.bamboo_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '450.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '650.000đ' }, { label: `120 ${t('servicesPage.min')}`, price: '820.000đ' }] },
-        { name: t('servicesPage.aroma_name'), desc: t('servicesPage.aroma_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '480.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '680.000đ' }, { label: `120 ${t('servicesPage.min')}`, price: '860.000đ' }] },
-        { name: t('servicesPage.herbal_name'), desc: t('servicesPage.herbal_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '460.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '660.000đ' }, { label: `120 ${t('servicesPage.min')}`, price: '840.000đ' }] },
+        { name: t('servicesPage.thai_name'), desc: t('servicesPage.thai_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '420.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '600.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '780.000 VND' }] },
+        { name: t('servicesPage.stone_name'), desc: t('servicesPage.stone_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '900.000 VND' }] },
+        { name: t('servicesPage.bamboo_name'), desc: t('servicesPage.bamboo_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '450.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '650.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '820.000 VND' }] },
+        { name: t('servicesPage.aroma_name'), desc: t('servicesPage.aroma_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '480.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '680.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '860.000 VND' }] },
+        { name: t('servicesPage.herbal_name'), desc: t('servicesPage.herbal_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '460.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '660.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '840.000 VND' }] },
       ],
     },
     {
       category: t('servicesPage.cat_body'), emoji: '✨',
       items: [
-        { name: t('servicesPage.scrub_name'), desc: t('servicesPage.scrub_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000đ' }] },
-        { name: t('servicesPage.wrap_name'), desc: t('servicesPage.wrap_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '520.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '730.000đ' }] },
+        { name: t('servicesPage.scrub_name'), desc: t('servicesPage.scrub_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000 VND' }] },
+        { name: t('servicesPage.wrap_name'), desc: t('servicesPage.wrap_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '520.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '730.000 VND' }] },
       ],
     },
     {
       category: t('servicesPage.cat_facial'), emoji: '🌸',
       items: [
-        { name: t('servicesPage.facial_name'), desc: t('servicesPage.facial_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '550.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '750.000đ' }] },
-        { name: t('servicesPage.anti_name'), desc: t('servicesPage.anti_desc'), prices: [{ label: `75 ${t('servicesPage.min')}`, price: '750.000đ' }, { label: `105 ${t('servicesPage.min')}`, price: '950.000đ' }] },
+        { name: t('servicesPage.facial_name'), desc: t('servicesPage.facial_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '550.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '750.000 VND' }] },
+        { name: t('servicesPage.anti_name'), desc: t('servicesPage.anti_desc'), prices: [{ label: `75 ${t('servicesPage.min')}`, price: '750.000 VND' }, { label: `105 ${t('servicesPage.min')}`, price: '950.000 VND' }] },
       ],
     },
     {
       category: t('servicesPage.cat_local'), emoji: '🙌',
       items: [
-        { name: t('servicesPage.foot_name'), desc: t('servicesPage.foot_desc'), prices: [{ label: `45 ${t('servicesPage.min')}`, price: '280.000đ' }, { label: `60 ${t('servicesPage.min')}`, price: '350.000đ' }, { label: `90 ${t('servicesPage.min')}`, price: '500.000đ' }] },
-        { name: t('servicesPage.head_name'), desc: t('servicesPage.head_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '220.000đ' }, { label: `45 ${t('servicesPage.min')}`, price: '320.000đ' }, { label: `60 ${t('servicesPage.min')}`, price: '400.000đ' }] },
-        { name: t('servicesPage.back_name'), desc: t('servicesPage.back_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '200.000đ' }, { label: `45 ${t('servicesPage.min')}`, price: '300.000đ' }, { label: `60 ${t('servicesPage.min')}`, price: '380.000đ' }] },
+        { name: t('servicesPage.foot_name'), desc: t('servicesPage.foot_desc'), prices: [{ label: `45 ${t('servicesPage.min')}`, price: '280.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '350.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '500.000 VND' }] },
+        { name: t('servicesPage.head_name'), desc: t('servicesPage.head_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '220.000 VND' }, { label: `45 ${t('servicesPage.min')}`, price: '320.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '400.000 VND' }] },
+        { name: t('servicesPage.back_name'), desc: t('servicesPage.back_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '200.000 VND' }, { label: `45 ${t('servicesPage.min')}`, price: '300.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '380.000 VND' }] },
       ],
     },
     {
       category: t('servicesPage.cat_nail'), emoji: '💅',
       items: [
-        { name: t('servicesPage.mani_name'), desc: t('servicesPage.mani_desc'), prices: [{ label: 'Classic', price: '180.000đ' }, { label: 'Gel', price: '280.000đ' }, { label: 'Acrylic', price: '350.000đ' }] },
-        { name: t('servicesPage.pedi_name'), desc: t('servicesPage.pedi_desc'), prices: [{ label: 'Classic', price: '220.000đ' }, { label: 'Gel', price: '320.000đ' }, { label: 'Acrylic', price: '400.000đ' }] },
-        { name: t('servicesPage.nailart_name'), desc: t('servicesPage.nailart_desc'), prices: [{ label: 'Basic', price: '50.000đ/nail' }, { label: 'Advanced', price: '100.000đ/nail' }] },
+        { name: t('servicesPage.mani_name'), desc: t('servicesPage.mani_desc'), prices: [{ label: 'Classic', price: '180.000 VND' }, { label: 'Gel', price: '280.000 VND' }, { label: 'Acrylic', price: '350.000 VND' }] },
+        { name: t('servicesPage.pedi_name'), desc: t('servicesPage.pedi_desc'), prices: [{ label: 'Classic', price: '220.000 VND' }, { label: 'Gel', price: '320.000 VND' }, { label: 'Acrylic', price: '400.000 VND' }] },
+        { name: t('servicesPage.nailart_name'), desc: t('servicesPage.nailart_desc'), prices: [{ label: 'Basic', price: '50.000 VND/nail' }, { label: 'Advanced', price: '100.000 VND/nail' }] },
       ],
     },
     {
       category: t('servicesPage.cat_combo'), emoji: '🎁',
       items: [
-        { name: 'Anna Relaxation Package', desc: t('servicesPage.relax_desc'), prices: [{ label: `90 ${t('servicesPage.min')}`, price: '650.000đ' }] },
-        { name: 'Anna Royal Package', desc: t('servicesPage.royal_desc'), prices: [{ label: `165 ${t('servicesPage.min')}`, price: '1.500.000đ' }] },
-        { name: 'Couples Spa Package', desc: t('servicesPage.couple_desc'), prices: [{ label: `90 ${t('servicesPage.min')}`, price: '1.600.000đ / 2' }] },
+        { name: t('servicesPage.relax_name'), desc: t('servicesPage.relax_desc'), prices: [{ label: `90 ${t('servicesPage.min')}`, price: '650.000 VND' }] },
+        { name: t('servicesPage.royal_name'), desc: t('servicesPage.royal_desc'), prices: [{ label: `165 ${t('servicesPage.min')}`, price: '1.500.000 VND' }] },
+        { name: t('servicesPage.couple_name'), desc: t('servicesPage.couple_desc'), prices: [{ label: `90 ${t('servicesPage.min')}`, price: '1.600.000 VND / 2' }] },
       ],
     },
   ];

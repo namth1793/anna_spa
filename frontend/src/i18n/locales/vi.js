@@ -94,6 +94,8 @@ export default {
       relax_desc: 'Thai Massage 60 phút + Foot Massage 30 phút + Herbal tea. Gói thư giãn hoàn hảo cho một buổi chiều trọn vẹn.',
       royal_desc: 'Hot Stone Massage 90 phút + Classic Facial 45 phút + Body Scrub 30 phút + Herbal welcome ritual. Trải nghiệm hoàng gia trọn vẹn.',
       couple_desc: 'Dành cho cặp đôi: 2x Aroma Therapy Massage 90 phút trong phòng couple riêng tư + welcome drinks + herbal bath.',
+      anna_name: 'Massage Anna', relax_name: 'Gói Anna Thư Giãn',
+      royal_name: 'Gói Anna Hoàng Gia', couple_name: 'Gói Spa Đôi',
       min: 'phút',
     },
     booking: {

@@ -42,12 +42,12 @@ export default function Home() {
   ];
 
   const SERVICES = [
-    { icon: <IconHands className="text-3xl text-gold" />, title: 'Thai Massage', desc: t('services.thai_desc'), price: 'Từ 420.000đ', duration: '60 phút' },
-    { icon: <IconFlame className="text-3xl text-gold" />, title: 'Hot Stone Massage', desc: t('services.stone_desc'), price: 'Từ 500.000đ', duration: '60 phút' },
-    { icon: <IconLeaf className="text-3xl text-gold" />, title: 'Herbal Treatment', desc: t('services.herbal_desc'), price: 'Từ 460.000đ', duration: '60 phút' },
-    { icon: <IconSpa className="text-3xl text-gold" />, title: 'Aroma Therapy', desc: t('services.aroma_desc'), price: 'Từ 480.000đ', duration: '60 phút' },
-    { icon: <IconHands className="text-3xl text-gold" />, title: 'Bamboo Massage', desc: t('services.bamboo_desc'), price: 'Từ 450.000đ', duration: '60 phút' },
-    { icon: <IconSpa className="text-3xl text-gold" />, title: 'Facial Treatment', desc: t('services.facial_desc'), price: 'Từ 550.000đ', duration: '60 phút' },
+    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.thai_name'), desc: t('services.thai_desc'), price: `${t('services.from')} 420.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconFlame className="text-3xl text-gold" />, title: t('servicesPage.stone_name'), desc: t('services.stone_desc'), price: `${t('services.from')} 500.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconLeaf className="text-3xl text-gold" />, title: t('servicesPage.herbal_name'), desc: t('services.herbal_desc'), price: `${t('services.from')} 460.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.aroma_name'), desc: t('services.aroma_desc'), price: `${t('services.from')} 480.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.bamboo_name'), desc: t('services.bamboo_desc'), price: `${t('services.from')} 450.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.facial_name'), desc: t('services.facial_desc'), price: `${t('services.from')} 550.000 VND`, duration: `60 ${t('servicesPage.min')}` },
   ];
 
   const STATS = [

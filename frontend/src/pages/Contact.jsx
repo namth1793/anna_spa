@@ -62,7 +62,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.address_label')}</p>
-                  <p className="text-dark-400 text-sm">28 An Thượng 26, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
+                  <p className="text-dark-400 text-sm">{t('info.address')}</p>
                   <a
                     href="https://maps.google.com/?q=28+An+Thuong+26+Da+Nang"
                     target="_blank"

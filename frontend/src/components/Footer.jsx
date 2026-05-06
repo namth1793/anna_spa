@@ -60,8 +60,13 @@ export default function Footer() {
           <h4 className="text-white font-playfair text-lg mb-5">{t('footer.servicesTitle')}</h4>
           <div className="w-10 h-px bg-gold mb-5" />
           <ul className="space-y-3">
-            {['Thai Massage','Hot Stone Massage','Bamboo Massage','Aroma Therapy','Herbal Treatment','Body Scrub','Facial Treatment','Nail Care'].map(s => (
-              <li key={s}>
+            {[
+              t('servicesPage.thai_name'), t('servicesPage.stone_name'),
+              t('servicesPage.bamboo_name'), t('servicesPage.aroma_name'),
+              t('servicesPage.herbal_name'), t('servicesPage.scrub_name'),
+              t('servicesPage.facial_name'), t('servicesPage.mani_name'),
+            ].map((s, i) => (
+              <li key={i}>
                 <Link to="/dich-vu" className="text-dark-300 hover:text-gold text-sm transition-colors flex items-center gap-2">
                   <span className="w-3 h-px bg-gold/50" />{s}
                 </Link>
@@ -77,7 +82,7 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex gap-3 text-sm text-dark-300">
               <IconMapPin className="text-gold mt-0.5 shrink-0" size={14} />
-              <span>28 An Thượng 26, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng</span>
+              <span>{t('info.address')}</span>
             </li>
             <li>
               <a href="tel:+84901905991" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
@@ -91,7 +96,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-3 text-sm text-dark-300">
               <IconClock className="text-gold mt-0.5 shrink-0" size={14} />
-              <span>09:00 – 23:00 | Mon – Sun</span>
+              <span>{t('info.hours')}</span>
             </li>
           </ul>
           <Link to="/dat-lich" className="mt-6 btn-gold text-xs py-2.5 px-6 inline-block">

@@ -3,11 +3,25 @@ import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
 import { IconCheck, IconPhone } from '../components/Icons';
 
-const SERVICES = [
-  'Thai Massage', 'Hot Stone Massage', 'Bamboo Massage', 'Aroma Therapy',
-  'Herbal Massage', 'Body Scrub', 'Body Wrap', 'Classic Facial',
-  'Anti-Aging Facial', 'Foot Massage', 'Head & Shoulder Massage', 'Back Massage',
-  'Manicure', 'Pedicure', 'Anna Relaxation Package', 'Anna Royal Package', 'Couples Spa Package',
+const SERVICE_KEYS = [
+  { key: 'thai_name', value: 'Thai Massage' },
+  { key: 'stone_name', value: 'Hot Stone Massage' },
+  { key: 'bamboo_name', value: 'Bamboo Massage' },
+  { key: 'aroma_name', value: 'Aroma Therapy' },
+  { key: 'herbal_name', value: 'Herbal Massage' },
+  { key: 'scrub_name', value: 'Body Scrub' },
+  { key: 'wrap_name', value: 'Body Wrap' },
+  { key: 'facial_name', value: 'Classic Facial' },
+  { key: 'anti_name', value: 'Anti-Aging Facial' },
+  { key: 'foot_name', value: 'Foot Massage' },
+  { key: 'head_name', value: 'Head & Shoulder Massage' },
+  { key: 'back_name', value: 'Back Massage' },
+  { key: 'mani_name', value: 'Manicure' },
+  { key: 'pedi_name', value: 'Pedicure' },
+  { key: 'anna_name', value: 'Anna Massage' },
+  { key: 'relax_name', value: 'Anna Relaxation Package' },
+  { key: 'royal_name', value: 'Anna Royal Package' },
+  { key: 'couple_name', value: 'Couples Spa Package' },
 ];
 
 const DURATIONS = ['30', '45', '60', '75', '90', '105', '120', '165'];
@@ -24,6 +38,7 @@ const today = new Date().toISOString().split('T')[0];
 
 export default function Booking() {
   const { t } = useTranslation();
+  const SERVICES = SERVICE_KEYS.map(s => ({ label: t(`servicesPage.${s.key}`), value: s.value }));
   const [form, setForm] = useState({
     name: '', phone: '', email: '', service: '',
     duration: '60', date: '', time: '', notes: '',
@@ -83,7 +98,7 @@ export default function Booking() {
               <ul className="space-y-4 text-sm text-dark-300">
                 <li className="flex gap-3">
                   <span className="text-gold mt-0.5">📍</span>
-                  <span>28 An Thượng 26, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng</span>
+                  <span>{t('info.address')}</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold">📞</span>
@@ -179,7 +194,7 @@ export default function Booking() {
                       className="w-full bg-dark-800 border border-dark-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer"
                     >
                       <option value="">{t('booking.selectService')}</option>
-                      {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
+                      {SERVICES.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
                     </select>
                   </div>
                   <div>

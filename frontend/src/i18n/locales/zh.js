@@ -92,6 +92,8 @@ export default {
       relax_desc: '泰式按摩60分钟 + 足部按摩30分钟 + 草药茶。完美下午的理想放松套餐。',
       royal_desc: '热石按摩90分钟 + 经典面部护理45分钟 + 身体磨砂30分钟 + 草药欢迎仪式。完整的皇家体验。',
       couple_desc: '情侣专属：私人情侣房内2次芳香疗法按摩90分钟 + 欢迎饮品 + 草药浴。',
+      anna_name: '安娜按摩', relax_name: '安娜放松套餐',
+      royal_name: '安娜皇家套餐', couple_name: '情侣水疗套餐',
       min: '分钟',
     },
     booking: {
