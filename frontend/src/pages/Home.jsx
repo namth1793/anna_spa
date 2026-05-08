@@ -41,13 +41,20 @@ export default function Home() {
     { bg: HERO_IMGS[4], title: t('hero.s2_title'), sub: t('hero.s2_sub') },
   ];
 
+  const pl = t('priceList', { returnObjects: true });
+  const s0 = pl?.sections?.[0]?.services || [];
+  const s1 = pl?.sections?.[1]?.services || [];
+  const vnd = pl?.vndUnit || 'VND';
+  const minUnit = pl?.minUnit || 'phút';
+  const from = t('services.from');
+
   const SERVICES = [
-    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.thai_name'), desc: t('services.thai_desc'), price: `${t('services.from')} 340.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconFlame className="text-3xl text-gold" />, title: t('servicesPage.stone_name'), desc: t('services.stone_desc'), price: `${t('services.from')} 650.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconLeaf className="text-3xl text-gold" />, title: t('servicesPage.herbal_name'), desc: t('services.herbal_desc'), price: `${t('services.from')} 460.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.aroma_name'), desc: t('services.aroma_desc'), price: `${t('services.from')} 330.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.bamboo_name'), desc: t('services.bamboo_desc'), price: `${t('services.from')} 450.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.facial_name'), desc: t('services.facial_desc'), price: `${t('services.from')} 550.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconSpa className="text-3xl text-gold" />,   title: s0[0]?.name, desc: t('services.aroma_desc'),   price: `${from} ${s0[0]?.options?.[0]?.price} ${vnd}`, duration: `${s0[0]?.options?.[0]?.dur} ${minUnit}` },
+    { icon: <IconHands className="text-3xl text-gold" />, title: s0[2]?.name, desc: t('services.thai_desc'),   price: `${from} ${s0[2]?.options?.[0]?.price} ${vnd}`, duration: `${s0[2]?.options?.[0]?.dur} ${minUnit}` },
+    { icon: <IconFlame className="text-3xl text-gold" />, title: s0[3]?.name, desc: t('services.stone_desc'),  price: `${from} ${s0[3]?.options?.[0]?.price} ${vnd}`, duration: `${s0[3]?.options?.[0]?.dur} ${minUnit}` },
+    { icon: <IconLeaf className="text-3xl text-gold" />,  title: s0[1]?.name, desc: t('services.aroma_desc'),  price: `${from} ${s0[1]?.options?.[0]?.price} ${vnd}`, duration: `${s0[1]?.options?.[0]?.dur} ${minUnit}` },
+    { icon: <IconHands className="text-3xl text-gold" />, title: s1[0]?.name, desc: t('services.thai_desc'),   price: `${from} ${s1[0]?.options?.[0]?.price} ${vnd}`, duration: `${s1[0]?.options?.[0]?.dur} ${minUnit}` },
+    { icon: <IconSpa className="text-3xl text-gold" />,   title: pl?.comboTitle, desc: (pl?.comboIncludes || []).slice(0, 3).join(' · '), price: `${from} ${pl?.combo?.options?.[0]?.price} ${vnd}`, duration: `${pl?.combo?.options?.[0]?.dur} ${minUnit}` },
   ];
 
   const STATS = [
@@ -116,7 +123,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/dat-lich" className="btn-gold">{t('hero.ctaBook')}</Link>
-            <Link to="/dich-vu" className="btn-outline-gold">{t('hero.ctaExplore')}</Link>
+            <Link to="/bang-gia" className="btn-outline-gold">{t('hero.ctaExplore')}</Link>
           </div>
           <div className="absolute bottom-8 flex gap-2">
             {HERO_SLIDES.map((_, i) => (
@@ -157,7 +164,7 @@ export default function Home() {
               </div>
               <span className="text-dark-300 text-sm">{t('welcome.rating')}</span>
             </div>
-            <Link to="/dich-vu" className="btn-gold">{t('welcome.viewServices')}</Link>
+            <Link to="/bang-gia" className="btn-gold">{t('welcome.viewServices')}</Link>
           </div>
         </div>
       </section>
@@ -185,7 +192,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link to="/dich-vu" className="btn-outline-gold">{t('services.viewAll')}</Link>
+            <Link to="/bang-gia" className="btn-outline-gold">{t('services.viewAll')}</Link>
           </div>
         </div>
       </section>

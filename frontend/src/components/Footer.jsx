@@ -4,6 +4,8 @@ import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconInsta
 
 export default function Footer() {
   const { t } = useTranslation();
+  const pl = t('priceList', { returnObjects: true });
+  const mainServices = pl?.sections?.[0]?.services || [];
 
   return (
     <footer className="bg-dark-950 border-t border-dark-800">
@@ -39,7 +41,6 @@ export default function Footer() {
           <ul className="space-y-3">
             {[
               { to: '/', label: t('nav.home') },
-              { to: '/dich-vu', label: t('nav.services') },
               { to: '/bang-gia', label: t('nav.price') },
               { to: '/thu-vien-anh', label: t('nav.gallery') },
               { to: '/dat-lich', label: t('nav.booking') },
@@ -60,15 +61,10 @@ export default function Footer() {
           <h4 className="text-white font-playfair text-lg mb-5">{t('footer.servicesTitle')}</h4>
           <div className="w-10 h-px bg-gold mb-5" />
           <ul className="space-y-3">
-            {[
-              t('servicesPage.thai_name'), t('servicesPage.stone_name'),
-              t('servicesPage.bamboo_name'), t('servicesPage.aroma_name'),
-              t('servicesPage.herbal_name'), t('servicesPage.scrub_name'),
-              t('servicesPage.facial_name'), t('servicesPage.mani_name'),
-            ].map((s, i) => (
+            {[...mainServices, { name: pl?.comboTitle }].filter(s => s?.name).map((s, i) => (
               <li key={i}>
-                <Link to="/dich-vu" className="text-dark-300 hover:text-gold text-sm transition-colors flex items-center gap-2">
-                  <span className="w-3 h-px bg-gold/50" />{s}
+                <Link to="/bang-gia" className="text-dark-300 hover:text-gold text-sm transition-colors flex items-center gap-2">
+                  <span className="w-3 h-px bg-gold/50" />{s.name}
                 </Link>
               </li>
             ))}
