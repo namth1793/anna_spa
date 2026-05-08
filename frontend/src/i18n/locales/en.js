@@ -142,7 +142,7 @@ export default {
       minUnit: 'mins', vndUnit: 'VND',
       comboTitle: 'Signature Combo',
       comboIncludesLabel: 'Includes:',
-      comboIncludes: ['Foot scrub, foot mask, waxing, nail care', 'Aroma hotstone & herbal therapy', 'THANN Oriental body oil'],
+      comboIncludes: ['Foot scrub', 'Foot mask', 'Ear wax cleaning care', 'Aroma hotstone', 'Herbal bath', 'Best body oil', 'Oriental THANN body oil'],
       sections: [
         {
           icon: '💆', title: 'Massage Services',

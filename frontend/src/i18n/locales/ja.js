@@ -142,7 +142,7 @@ export default {
       minUnit: '分', vndUnit: 'VND',
       comboTitle: 'シグネチャーコンボ',
       comboIncludesLabel: '含まれるもの:',
-      comboIncludes: ['フットケア + フェイスマスク + ムダ毛処理 + ネイルケア', 'アロマ + ホットストーン + ハーブ療法', 'THANNオリエンタルオイル'],
+      comboIncludes: ['フットスクラブ (Foot Scrub)', 'フットマスク (Foot Mask)', '耳垢クリーニングケア (Ear Wax Cleaning)', 'アロマホットストーン (Aroma Hotstone)', 'ハーブバス (Herbal Bath)', 'プレミアムボディオイル (Best Body Oil)', 'THANNオリエンタルボディオイル'],
       sections: [
         {
           icon: '💆', title: 'マッサージサービス',

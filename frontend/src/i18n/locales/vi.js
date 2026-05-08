@@ -144,7 +144,7 @@ export default {
       minUnit: 'phút', vndUnit: 'VND',
       comboTitle: 'Combo Signature',
       comboIncludesLabel: 'Bao gồm:',
-      comboIncludes: ['Ngâm chân + đắp mặt + tẩy lông + chăm sóc móng', 'Đá nóng + thảo dược', 'Dầu body cao cấp (THANN – Oriental)'],
+      comboIncludes: ['Tẩy da chết chân (Foot Scrub)', 'Đắp mặt nạ chân (Foot Mask)', 'Vệ sinh tai (Ear Wax Cleaning)', 'Đá nóng tinh dầu (Aroma Hotstone)', 'Tắm thảo dược (Herbal Bath)', 'Dầu body cao cấp (Best Body Oil)', 'Dầu Oriental THANN'],
       sections: [
         {
           icon: '💆', title: 'Dịch Vụ Massage',

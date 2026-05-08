@@ -142,7 +142,7 @@ export default {
       minUnit: '분', vndUnit: '동',
       comboTitle: '시그니처 콤보',
       comboIncludesLabel: '포함 내용:',
-      comboIncludes: ['발 케어 + 왁싱 + 네일 케어', '아로마 + 핫스톤 + 허브', 'THANN 오리엔탈 오일'],
+      comboIncludes: ['발 각질 제거 (Foot Scrub)', '발 마스크 (Foot Mask)', '귀 청소 케어 (Ear Wax Cleaning)', '아로마 핫스톤 (Aroma Hotstone)', '허브 목욕 (Herbal Bath)', '프리미엄 바디 오일 (Best Body Oil)', 'THANN 오리엔탈 바디 오일'],
       sections: [
         {
           icon: '💆', title: '마사지 서비스',

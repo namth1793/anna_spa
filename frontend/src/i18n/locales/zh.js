@@ -142,7 +142,7 @@ export default {
       minUnit: '分钟', vndUnit: '越南盾',
       comboTitle: '招牌套餐',
       comboIncludesLabel: '套餐包含:',
-      comboIncludes: ['足部护理 + 面膜 + 脱毛 + 美甲护理', '热石 + 草药 + 精油（THANN）'],
+      comboIncludes: ['足部磨砂 (Foot Scrub)', '足部面膜 (Foot Mask)', '耳道清洁护理 (Ear Wax Cleaning)', '精油热石 (Aroma Hotstone)', '草药浴 (Herbal Bath)', '顶级身体精油 (Best Body Oil)', 'THANN 东方身体精油'],
       sections: [
         {
           icon: '💆', title: '按摩服务',
