@@ -42,10 +42,10 @@ export default function Home() {
   ];
 
   const SERVICES = [
-    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.thai_name'), desc: t('services.thai_desc'), price: `${t('services.from')} 420.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconFlame className="text-3xl text-gold" />, title: t('servicesPage.stone_name'), desc: t('services.stone_desc'), price: `${t('services.from')} 500.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.thai_name'), desc: t('services.thai_desc'), price: `${t('services.from')} 340.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconFlame className="text-3xl text-gold" />, title: t('servicesPage.stone_name'), desc: t('services.stone_desc'), price: `${t('services.from')} 650.000 VND`, duration: `60 ${t('servicesPage.min')}` },
     { icon: <IconLeaf className="text-3xl text-gold" />, title: t('servicesPage.herbal_name'), desc: t('services.herbal_desc'), price: `${t('services.from')} 460.000 VND`, duration: `60 ${t('servicesPage.min')}` },
-    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.aroma_name'), desc: t('services.aroma_desc'), price: `${t('services.from')} 480.000 VND`, duration: `60 ${t('servicesPage.min')}` },
+    { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.aroma_name'), desc: t('services.aroma_desc'), price: `${t('services.from')} 330.000 VND`, duration: `60 ${t('servicesPage.min')}` },
     { icon: <IconHands className="text-3xl text-gold" />, title: t('servicesPage.bamboo_name'), desc: t('services.bamboo_desc'), price: `${t('services.from')} 450.000 VND`, duration: `60 ${t('servicesPage.min')}` },
     { icon: <IconSpa className="text-3xl text-gold" />, title: t('servicesPage.facial_name'), desc: t('services.facial_desc'), price: `${t('services.from')} 550.000 VND`, duration: `60 ${t('servicesPage.min')}` },
   ];

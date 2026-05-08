@@ -8,17 +8,17 @@ export default function Services() {
     {
       category: t('servicesPage.cat_massage'), emoji: '💆',
       items: [
-        { name: t('servicesPage.thai_name'), desc: t('servicesPage.thai_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '420.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '600.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '780.000 VND' }] },
-        { name: t('servicesPage.stone_name'), desc: t('servicesPage.stone_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '900.000 VND' }] },
+        { name: t('servicesPage.thai_name'), desc: t('servicesPage.thai_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '340.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '470.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '600.000 VND' }] },
+        { name: t('servicesPage.stone_name'), desc: t('servicesPage.stone_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '650.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '850.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '1.050.000 VND' }] },
         { name: t('servicesPage.bamboo_name'), desc: t('servicesPage.bamboo_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '450.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '650.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '820.000 VND' }] },
-        { name: t('servicesPage.aroma_name'), desc: t('servicesPage.aroma_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '480.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '680.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '860.000 VND' }] },
+        { name: t('servicesPage.aroma_name'), desc: t('servicesPage.aroma_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '330.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '430.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '530.000 VND' }] },
         { name: t('servicesPage.herbal_name'), desc: t('servicesPage.herbal_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '460.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '660.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '840.000 VND' }] },
       ],
     },
     {
       category: t('servicesPage.cat_body'), emoji: '✨',
       items: [
-        { name: t('servicesPage.scrub_name'), desc: t('servicesPage.scrub_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '500.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '700.000 VND' }] },
+        { name: t('servicesPage.scrub_name'), desc: t('servicesPage.scrub_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '150.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '300.000 VND' }] },
         { name: t('servicesPage.wrap_name'), desc: t('servicesPage.wrap_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '520.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '730.000 VND' }] },
       ],
     },
@@ -32,9 +32,9 @@ export default function Services() {
     {
       category: t('servicesPage.cat_local'), emoji: '🙌',
       items: [
-        { name: t('servicesPage.foot_name'), desc: t('servicesPage.foot_desc'), prices: [{ label: `45 ${t('servicesPage.min')}`, price: '280.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '350.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '500.000 VND' }] },
+        { name: t('servicesPage.foot_name'), desc: t('servicesPage.foot_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '300.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '400.000 VND' }, { label: `120 ${t('servicesPage.min')}`, price: '500.000 VND' }] },
         { name: t('servicesPage.head_name'), desc: t('servicesPage.head_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '220.000 VND' }, { label: `45 ${t('servicesPage.min')}`, price: '320.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '400.000 VND' }] },
-        { name: t('servicesPage.back_name'), desc: t('servicesPage.back_desc'), prices: [{ label: `30 ${t('servicesPage.min')}`, price: '200.000 VND' }, { label: `45 ${t('servicesPage.min')}`, price: '300.000 VND' }, { label: `60 ${t('servicesPage.min')}`, price: '380.000 VND' }] },
+        { name: t('servicesPage.back_name'), desc: t('servicesPage.back_desc'), prices: [{ label: `60 ${t('servicesPage.min')}`, price: '340.000 VND' }, { label: `90 ${t('servicesPage.min')}`, price: '470.000 VND' }] },
       ],
     },
     {
