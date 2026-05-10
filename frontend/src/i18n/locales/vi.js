@@ -63,7 +63,7 @@ export default {
     },
     info: {
       address_label: 'Địa Chỉ', hours_label: 'Giờ Mở Cửa', contact_label: 'Liên Hệ',
-      address: '28 An Thượng 26, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng',
+      address: '11A Trần Quốc Toản, Hải Châu, Đà Nẵng',
       hours: '09:00 – 23:00 | Thứ 2 – Chủ Nhật (Cả tuần)',
     },
     servicesPage: {
@@ -111,7 +111,7 @@ export default {
       submit: 'XÁC NHẬN ĐẶT LỊCH', submitting: 'Đang Gửi...',
       successTitle: 'Đặt Lịch Thành Công!', bookAnother: 'Đặt Lịch Khác',
       errRequired: 'Vui lòng điền đầy đủ các trường bắt buộc (*).',
-      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp +84 90 190 59 91.',
+      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0766 668 792.',
       hours: '09:00 – 23:00 | Thứ 2 – Chủ Nhật',
     },
     galleryPage: {
@@ -129,7 +129,7 @@ export default {
       submit: 'GỬI TIN NHẮN', submitting: 'Đang Gửi...',
       successTitle: 'Gửi Thành Công!', sendAnother: 'Gửi Tin Nhắn Khác',
       errRequired: 'Vui lòng điền tên, email và nội dung tin nhắn.',
-      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp +84 90 190 59 91.',
+      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0766 668 792.',
     },
     footer: {
       desc: 'Trải nghiệm thư giãn đích thực với các liệu pháp spa truyền thống Việt Nam và quốc tế. Đội ngũ chuyên trị liệu chuyên nghiệp, không gian sang trọng và yên tĩnh.',
@@ -140,7 +140,7 @@ export default {
       label: 'Bảng Giá', title: 'Bảng Giá Dịch Vụ',
       address: '11A Trần Quốc Toản, Hải Châu, Đà Nẵng',
       hours: '9:00 SA – 11:30 CH',
-      bonus: 'Miễn phí xông hơi (Hotstone free)',
+      bonus: 'Hotstone free',
       minUnit: 'phút', vndUnit: 'VND',
       comboTitle: 'Combo Signature',
       comboIncludesLabel: 'Bao gồm:',

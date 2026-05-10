@@ -63,7 +63,7 @@ export default {
     },
     info: {
       address_label: '주소', hours_label: '영업시간', contact_label: '연락처',
-      address: '28 An Thuong 26, Bac My Phu, Ngu Hanh Son, Da Nang',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
       hours: '09:00 – 23:00 | 월요일~일요일 (매일)',
     },
     servicesPage: {
@@ -109,7 +109,7 @@ export default {
       submit: '예약 확정', submitting: '전송 중...',
       successTitle: '예약 완료!', bookAnother: '다른 예약하기',
       errRequired: '필수 항목（*）을 모두 입력해주세요.',
-      errGeneral: '오류가 발생했습니다. +84 90 190 59 91로 직접 전화해주세요.',
+      errGeneral: '오류가 발생했습니다. 0766 668 792로 직접 전화해주세요.',
       hours: '09:00 – 23:00 | 월~일',
     },
     galleryPage: {
@@ -127,7 +127,7 @@ export default {
       submit: '메시지 보내기', submitting: '전송 중...',
       successTitle: '전송 완료!', sendAnother: '다른 메시지 보내기',
       errRequired: '성함, 이메일, 메시지를 입력해주세요.',
-      errGeneral: '오류가 발생했습니다. +84 90 190 59 91로 직접 전화해주세요.',
+      errGeneral: '오류가 발생했습니다. 0766 668 792로 직접 전화해주세요.',
     },
     footer: {
       desc: '베트남 전통 및 국제 스파 테라피로 진정한 휴식을 경험하세요. 전문 테라피스트, 럭셔리하고 고요한 환경.',

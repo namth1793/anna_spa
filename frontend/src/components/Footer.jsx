@@ -81,8 +81,8 @@ export default function Footer() {
               <span>{t('info.address')}</span>
             </li>
             <li>
-              <a href="tel:+84901905991" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
-                <IconPhone className="text-gold mt-0.5 shrink-0" size={14} />+84 90 190 59 91
+              <a href="tel:+840766668792" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
+                <IconPhone className="text-gold mt-0.5 shrink-0" size={14} />0766 668 792
               </a>
             </li>
             <li>
@@ -104,8 +104,8 @@ export default function Footer() {
       <div className="border-t border-dark-800 py-5 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-dark-500">
         <span>© {new Date().getFullYear()} {t('footer.rights')}</span>
         <div className="flex items-center gap-2">
-          <span className="text-gold">★★★★★</span>
-          <span>5.0/5 · Travelers' Choice 2025</span>
+          <span className="text-gold">🎁</span>
+          <span className="text-gold font-medium">Giảm 10% Happy Time · 9:00 – 14:30</span>
         </div>
         <Link to="/admin/login" className="text-white text-xs hover:text-gold transition-colors">Admin</Link>
       </div>

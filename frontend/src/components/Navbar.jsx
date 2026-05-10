@@ -36,9 +36,9 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="hidden md:flex justify-between items-center px-8 py-2 border-b border-gold/20 text-xs text-dark-300">
         <span>{t('nav.openHours')}</span>
-        <a href="tel:+84901905991" className="flex items-center gap-2 text-gold hover:text-gold-300 transition-colors font-medium">
+        <a href="tel:+840766668792" className="flex items-center gap-2 text-gold hover:text-gold-300 transition-colors font-medium">
           <IconPhone size={10} />
-          +84 90 190 59 91
+          0766 668 792
         </a>
       </div>
 
@@ -99,8 +99,8 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a href="tel:+84901905991" className="flex items-center gap-2 text-gold text-sm">
-                <IconPhone size={14} /> +84 90 190 59 91
+              <a href="tel:+840766668792" className="flex items-center gap-2 text-gold text-sm">
+                <IconPhone size={14} /> 0766 668 792
               </a>
             </li>
           </ul>

@@ -63,7 +63,7 @@ export default {
     },
     info: {
       address_label: 'Address', hours_label: 'Opening Hours', contact_label: 'Contact',
-      address: '28 An Thuong 26, Bac My Phu, Ngu Hanh Son, Da Nang',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
       hours: '09:00 – 23:00 | Monday – Sunday (All week)',
     },
     servicesPage: {
@@ -109,7 +109,7 @@ export default {
       submit: 'CONFIRM BOOKING', submitting: 'Sending...',
       successTitle: 'Booking Successful!', bookAnother: 'Book Another',
       errRequired: 'Please fill in all required fields (*).',
-      errGeneral: 'An error occurred. Please call +84 90 190 59 91 directly.',
+      errGeneral: 'An error occurred. Please call 0766 668 792 directly.',
       hours: '09:00 – 23:00 | Mon – Sun',
     },
     galleryPage: {
@@ -127,7 +127,7 @@ export default {
       submit: 'SEND MESSAGE', submitting: 'Sending...',
       successTitle: 'Sent Successfully!', sendAnother: 'Send Another Message',
       errRequired: 'Please fill in name, email and message.',
-      errGeneral: 'An error occurred. Please call +84 90 190 59 91 directly.',
+      errGeneral: 'An error occurred. Please call 0766 668 792 directly.',
     },
     footer: {
       desc: 'Experience genuine relaxation with traditional Vietnamese and international spa therapies. Professional therapists, luxurious and serene environment.',

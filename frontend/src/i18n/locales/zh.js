@@ -63,7 +63,7 @@ export default {
     },
     info: {
       address_label: '地址', hours_label: '营业时间', contact_label: '联系方式',
-      address: '越南岘港五行山区北美富坊安上26街28号',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
       hours: '09:00 – 23:00 | 周一至周日（全周）',
     },
     servicesPage: {
@@ -109,7 +109,7 @@ export default {
       submit: '确认预约', submitting: '提交中...',
       successTitle: '预约成功！', bookAnother: '再次预约',
       errRequired: '请填写所有必填项（*）。',
-      errGeneral: '发生错误，请直接致电 +84 90 190 59 91。',
+      errGeneral: '发生错误，请直接致电 0766 668 792。',
       hours: '09:00 – 23:00 | 周一至周日',
     },
     galleryPage: {
@@ -127,7 +127,7 @@ export default {
       submit: '发送消息', submitting: '发送中...',
       successTitle: '发送成功！', sendAnother: '发送另一条消息',
       errRequired: '请填写姓名、电子邮件和消息内容。',
-      errGeneral: '发生错误，请直接致电 +84 90 190 59 91。',
+      errGeneral: '发生错误，请直接致电 0766 668 792。',
     },
     footer: {
       desc: '体验越南传统及国际水疗疗法带来的真正放松。专业治疗师，奢华宁静的环境。',

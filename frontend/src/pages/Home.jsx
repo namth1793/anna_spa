@@ -349,7 +349,7 @@ export default function Home() {
           <p className="text-dark-300 max-w-xl mx-auto mb-10 leading-relaxed">{t('cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/dat-lich" className="btn-gold">{t('cta.bookOnline')}</Link>
-            <a href="tel:+84901905991" className="btn-outline-gold flex items-center justify-center gap-2">
+            <a href="tel:+840766668792" className="btn-outline-gold flex items-center justify-center gap-2">
               <IconPhone size={12} /> {t('cta.callNow')}
             </a>
           </div>
@@ -377,7 +377,7 @@ export default function Home() {
             <IconPhone className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.contact_label')}</h4>
-              <a href="tel:+84901905991" className="text-dark-400 text-sm hover:text-gold transition-colors block">+84 90 190 59 91</a>
+              <a href="tel:+840766668792" className="text-dark-400 text-sm hover:text-gold transition-colors block">0766 668 792</a>
               <a href="mailto:annaspa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors block">annaspa.danang@gmail.com</a>
             </div>
           </div>

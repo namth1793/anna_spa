@@ -63,7 +63,7 @@ export default {
     },
     info: {
       address_label: '住所', hours_label: '営業時間', contact_label: 'お問い合わせ',
-      address: '28 An Thuong 26, Bac My Phu, Ngu Hanh Son, Da Nang',
+      address: '11A Tran Quoc Toan, Hai Chau, Da Nang',
       hours: '09:00 – 23:00 | 月曜日〜日曜日（毎日）',
     },
     servicesPage: {
@@ -109,7 +109,7 @@ export default {
       submit: '予約を確定する', submitting: '送信中...',
       successTitle: '予約が完了しました！', bookAnother: '別の予約をする',
       errRequired: 'すべての必須項目（*）を入力してください。',
-      errGeneral: 'エラーが発生しました。+84 90 190 59 91 に直接お電話ください。',
+      errGeneral: 'エラーが発生しました。0766 668 792 に直接お電話ください。',
       hours: '09:00 – 23:00 | 月〜日',
     },
     galleryPage: {
@@ -127,7 +127,7 @@ export default {
       submit: 'メッセージを送る', submitting: '送信中...',
       successTitle: '送信完了！', sendAnother: '別のメッセージを送る',
       errRequired: 'お名前、メール、メッセージを入力してください。',
-      errGeneral: 'エラーが発生しました。+84 90 190 59 91 に直接お電話ください。',
+      errGeneral: 'エラーが発生しました。0766 668 792 に直接お電話ください。',
     },
     footer: {
       desc: 'ベトナムと国際的な伝統スパセラピーで本物のリラクゼーションを体験してください。プロのセラピスト、豪華で静寂な環境。',
