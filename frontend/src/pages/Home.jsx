@@ -16,13 +16,10 @@ const HERO_IMGS = [
 ];
 
 const GALLERY = [
-  '/slide1.jpg',
-  '/slide2.jpg',
   'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
   'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80',
   'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80',
   'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80',
-  'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80',
   'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80',
 ];
 
@@ -156,7 +153,22 @@ export default function Home() {
             <h2 className="section-title mb-2">{t('welcome.title')}</h2>
             <div className="gold-divider mx-0 mb-6" />
             <p className="text-dark-300 leading-relaxed mb-4">{t('welcome.p1')}</p>
-            <p className="text-dark-300 leading-relaxed mb-4">{t('welcome.p2')}</p>
+            <p className="text-dark-300 leading-relaxed mb-2">{t('welcome.p2')}</p>
+            <ul className="mb-4 space-y-1 pl-1">
+              {t('welcome.services', { returnObjects: true }).map((s, i) => (
+                <li key={i} className="flex items-start gap-2 text-dark-300 text-sm">
+                  <span className="text-gold mt-0.5 select-none">•</span>{s}
+                </li>
+              ))}
+            </ul>
+            <p className="text-dark-300 leading-relaxed mb-2">{t('welcome.highlights_title')}</p>
+            <ul className="mb-4 space-y-1 pl-1">
+              {t('welcome.highlights', { returnObjects: true }).map((h, i) => (
+                <li key={i} className="flex items-start gap-2 text-dark-300 text-sm">
+                  <span className="text-gold mt-0.5 select-none">•</span>{h}
+                </li>
+              ))}
+            </ul>
             <p className="text-dark-300 leading-relaxed mb-8">{t('welcome.p3')}</p>
             <div className="flex items-center gap-4 mb-8">
               <div className="flex text-gold gap-0.5">

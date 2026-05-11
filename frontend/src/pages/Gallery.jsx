@@ -9,7 +9,6 @@ const PHOTOS = [
   { src: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=75', cat: 'service', caption: 'Massage thảo dược truyền thống' },
   { src: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=75', cat: 'service', caption: 'Chăm sóc sắc đẹp toàn diện' },
   { src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=75', cat: 'space', caption: 'Phòng chờ và lễ tân' },
-  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=75', cat: 'service', caption: 'Facial treatment cao cấp' },
   { src: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=75', cat: 'space', caption: 'Reception area trang nhã' },
   { src: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=75', cat: 'service', caption: 'Aroma therapy với tinh dầu tự nhiên' },
   { src: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?w=800&q=80', thumb: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?w=400&q=75', cat: 'service', caption: 'Foot massage thư giãn' },
