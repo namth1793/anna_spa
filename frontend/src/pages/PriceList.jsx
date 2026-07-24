@@ -9,6 +9,7 @@ export default function PriceList() {
 
   const packages = pl.packages || [];
   const benefits = pl.benefits || [];
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="bg-dark-950 min-h-screen pt-28 pb-20">
@@ -33,7 +34,7 @@ export default function PriceList() {
                 {pkg.price} <span className="text-dark-400 text-xs font-normal">{pl.vndUnit}</span>
               </span>
             </div>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-5">
               {(pkg.desc || []).map((line, di) => (
                 <li key={di} className="flex items-start gap-2 text-dark-300 text-sm leading-relaxed">
                   <span className="text-gold mt-1 shrink-0">✦</span>
@@ -41,6 +42,12 @@ export default function PriceList() {
                 </li>
               ))}
             </ul>
+            <Link
+              to={`/dat-lich?service=${encodeURIComponent(pkg.name)}&date=${today}`}
+              className="btn-gold w-full text-center text-xs py-2.5 block"
+            >
+              {t('nav.bookNow')}
+            </Link>
           </div>
         ))}
       </div>

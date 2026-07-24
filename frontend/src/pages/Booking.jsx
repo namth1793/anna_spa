@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
 import { IconCheck, IconPhone } from '../components/Icons';
@@ -38,10 +39,13 @@ const today = new Date().toISOString().split('T')[0];
 
 export default function Booking() {
   const { t } = useTranslation();
-  const SERVICES = SERVICE_KEYS.map(s => ({ label: t(`servicesPage.${s.key}`), value: s.value }));
+  const [searchParams] = useSearchParams();
+  const pl = t('priceList', { returnObjects: true });
+  const PACKAGE_OPTIONS = (pl?.packages || []).map(p => ({ label: p.name, value: p.name }));
+  const SERVICES = [...PACKAGE_OPTIONS, ...SERVICE_KEYS.map(s => ({ label: t(`servicesPage.${s.key}`), value: s.value }))];
   const [form, setForm] = useState({
-    name: '', phone: '', email: '', service: '',
-    duration: '60', date: '', time: '', notes: '',
+    name: '', phone: '', email: '', service: searchParams.get('service') || '',
+    duration: '60', date: searchParams.get('date') || '', time: '', notes: '',
   });
   const [status, setStatus] = useState('idle');
   const [msg, setMsg] = useState('');
