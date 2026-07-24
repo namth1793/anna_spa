@@ -18,9 +18,9 @@ const SERVICE_KEYS = [
   { key: 'back_name', value: 'Back Massage' },
   { key: 'mani_name', value: 'Manicure' },
   { key: 'pedi_name', value: 'Pedicure' },
-  { key: 'anna_name', value: 'Anna Massage' },
-  { key: 'relax_name', value: 'Anna Relaxation Package' },
-  { key: 'royal_name', value: 'Anna Royal Package' },
+  { key: 'apollo_name', value: 'Apollo Massage' },
+  { key: 'relax_name', value: 'Apollo Relaxation Package' },
+  { key: 'royal_name', value: 'Apollo Royal Package' },
   { key: 'couple_name', value: 'Couples Spa Package' },
 ];
 
@@ -106,7 +106,7 @@ export default function Booking() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold">✉️</span>
-                  <a href="mailto:annaspa.danang@gmail.com" className="hover:text-gold transition-colors">annaspa.danang@gmail.com</a>
+                  <a href="mailto:apollospa.danang@gmail.com" className="hover:text-gold transition-colors">apollospa.danang@gmail.com</a>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold">🕘</span>

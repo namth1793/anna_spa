@@ -16,7 +16,7 @@ const STATUS_LABELS = {
 };
 
 function authHeaders() {
-  return { Authorization: `Bearer ${localStorage.getItem('anna_admin_token')}` };
+  return { Authorization: `Bearer ${localStorage.getItem('apollo_admin_token')}` };
 }
 
 export default function AdminDashboard() {
@@ -43,7 +43,7 @@ export default function AdminDashboard() {
       setTestimonials(t.data);
     } catch (err) {
       if (err.response?.status === 401) {
-        localStorage.removeItem('anna_admin_token');
+        localStorage.removeItem('apollo_admin_token');
         navigate('/admin/login');
       }
     } finally {
@@ -54,7 +54,7 @@ export default function AdminDashboard() {
   useEffect(() => { fetchAll(); }, [fetchAll]);
 
   const logout = () => {
-    localStorage.removeItem('anna_admin_token');
+    localStorage.removeItem('apollo_admin_token');
     navigate('/admin/login');
   };
 
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
       <header className="bg-dark-900 border-b border-dark-700 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-4">
           <Link to="/" className="font-playfair text-2xl font-bold">
-            <span className="text-gold">ANNA</span> SPA
+            <span className="text-gold">APOLLO</span> SPA
           </Link>
           <span className="text-[10px] bg-gold/20 text-gold border border-gold/30 px-2 py-0.5 uppercase tracking-widest rounded-sm">
             Admin

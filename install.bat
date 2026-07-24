@@ -1,6 +1,6 @@
 @echo off
 echo ============================================
-echo    ANNA SPA DA NANG - Installing...
+echo    APOLLO SPA DA NANG - Installing...
 echo ============================================
 
 echo.

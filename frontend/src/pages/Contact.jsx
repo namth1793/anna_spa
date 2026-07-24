@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16">
           {/* Info */}
           <div>
-            <h2 className="font-playfair text-3xl text-white mb-3">Anna Spa Da Nang</h2>
+            <h2 className="font-playfair text-3xl text-white mb-3">Apollo Spa Da Nang</h2>
             <div className="w-12 h-px bg-gold mb-6" />
             <p className="text-dark-400 text-sm leading-relaxed mb-10">{t('contact.desc')}</p>
 
@@ -88,7 +88,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.email_label')}</p>
-                  <a href="mailto:annaspa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors">annaspa.danang@gmail.com</a>
+                  <a href="mailto:apollospa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors">apollospa.danang@gmail.com</a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -124,7 +124,7 @@ export default function Contact() {
             {/* Map embed */}
             <div className="mt-10 aspect-video border border-dark-700 overflow-hidden">
               <iframe
-                title="Anna Spa Da Nang Map"
+                title="Apollo Spa Da Nang Map"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=108.2381,16.0352,108.2481,16.0420&layer=mapnik&marker=16.0386,108.2431"
                 className="w-full h-full"
                 style={{ filter: 'invert(90%) hue-rotate(180deg)' }}

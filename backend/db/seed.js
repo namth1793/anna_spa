@@ -16,7 +16,7 @@ const testimonials = [
     country: 'Úc',
     flag: '🇦🇺',
     rating: 5,
-    content: 'Anna Spa is hands down the finest spa in Da Nang. The hot stone massage melted away all my travel tension. The facility is impeccably clean, the ambiance is serene, and the staff go above and beyond to ensure you are comfortable. Highly recommend!'
+    content: 'Apollo Spa is hands down the finest spa in Da Nang. The hot stone massage melted away all my travel tension. The facility is impeccably clean, the ambiance is serene, and the staff go above and beyond to ensure you are comfortable. Highly recommend!'
   },
   {
     name: 'Yuki Tanaka',
@@ -37,7 +37,7 @@ const testimonials = [
     country: 'Anh',
     flag: '🇬🇧',
     rating: 5,
-    content: 'I visited Anna Spa three times during my two-week stay in Da Nang — that tells you everything! The herbal massage using traditional Vietnamese remedies was extraordinary. The welcome drink, herbal foot bath, and farewell tea make it a complete luxury experience.'
+    content: 'I visited Apollo Spa three times during my two-week stay in Da Nang — that tells you everything! The herbal massage using traditional Vietnamese remedies was extraordinary. The welcome drink, herbal foot bath, and farewell tea make it a complete luxury experience.'
   },
   {
     name: 'Min Ji Park',

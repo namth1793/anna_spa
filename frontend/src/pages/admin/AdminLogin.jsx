@@ -14,7 +14,7 @@ export default function AdminLogin() {
     setError('');
     try {
       const res = await api.post('/api/auth/login', form);
-      localStorage.setItem('anna_admin_token', res.data.token);
+      localStorage.setItem('apollo_admin_token', res.data.token);
       navigate('/admin');
     } catch (err) {
       setError(err.response?.data?.error || 'Đăng nhập thất bại. Vui lòng thử lại.');
@@ -30,7 +30,7 @@ export default function AdminLogin() {
         <div className="text-center mb-10">
           <Link to="/">
             <span className="font-playfair text-4xl font-bold text-white">
-              <span className="text-gold">ANNA</span> SPA
+              <span className="text-gold">APOLLO</span> SPA
             </span>
           </Link>
           <p className="text-dark-500 text-xs mt-2 tracking-[0.3em] uppercase">Admin Panel</p>

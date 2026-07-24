@@ -8,15 +8,15 @@ export default {
       price: 'Bảng Giá',
     },
     hero: {
-      brand: 'Anna Spa Đà Nẵng',
+      brand: 'Apollo Spa Đà Nẵng',
       s1_title: 'Thư Giãn Tuyệt Đối', s1_sub: 'Massage Đá Nóng & Thai Massage Cao Cấp',
       s2_title: 'Cân Bằng Tâm Hồn', s2_sub: 'Liệu Pháp Thảo Dược Cổ Truyền Việt Nam',
       s3_title: 'Vẻ Đẹp Rạng Ngời', s3_sub: 'Chăm Sóc Da Mặt & Aroma Therapy',
       ctaBook: 'Đặt Lịch Ngay', ctaExplore: 'Khám Phá Dịch Vụ',
     },
     welcome: {
-      label: 'Chào Mừng Đến Với', title: 'Anna Spa Đà Nẵng',
-      p1: 'Anna Spa Đà Nẵng là một spa thư giãn nằm ngay trung tâm Hải Châu, gần chợ Hàn và nhà thờ Con Gà nên rất thuận tiện cho khách du lịch hoặc người muốn thư giãn sau khi đi dạo trung tâm Đà Nẵng.',
+      label: 'Chào Mừng Đến Với', title: 'Apollo Spa Đà Nẵng',
+      p1: 'Apollo Spa Đà Nẵng là một spa thư giãn nằm ngay trung tâm Hải Châu, gần chợ Hàn và nhà thờ Con Gà nên rất thuận tiện cho khách du lịch hoặc người muốn thư giãn sau khi đi dạo trung tâm Đà Nẵng.',
       p2: 'Không gian của spa theo phong cách nhẹ nhàng, sạch sẽ và thư giãn. Mùi tinh dầu dịu, ánh sáng ấm và tiếng nhạc nhẹ tạo cảm giác khá dễ chịu ngay khi bước vào. Nơi đây nổi tiếng với:',
       services: ['Massage body thư giãn', 'Massage đá nóng', 'Massage Thai', 'Foot massage', 'Chăm sóc cơ thể và thư giãn sau du lịch'],
       highlights_title: 'Điểm được nhiều khách đánh giá tốt là:',
@@ -41,7 +41,7 @@ export default {
       years: 'Năm Kinh Nghiệm', treatments: 'Liệu Pháp Thư Giãn',
     },
     why: {
-      label: 'Tại Sao Chọn Chúng Tôi', title: 'Cam Kết Của Anna Spa',
+      label: 'Tại Sao Chọn Chúng Tôi', title: 'Cam Kết Của Apollo Spa',
       natural_title: 'Nguyên Liệu Tự Nhiên', natural_desc: 'Chỉ sử dụng thảo dược thuần tự nhiên và tinh dầu hữu cơ cao cấp, không hóa chất độc hại.',
       expert_title: 'Chuyên Gia Được Đào Tạo', expert_desc: 'Đội ngũ therapist được đào tạo chuyên sâu, chứng nhận quốc tế với hơn 10 năm kinh nghiệm.',
       space_title: 'Không Gian Yên Tĩnh', space_desc: 'Phòng trị liệu riêng tư, âm nhạc thiền, ánh sáng dịu nhẹ — không gian hoàn hảo để thư giãn.',
@@ -54,7 +54,7 @@ export default {
       s3_title: 'Liệu Trình Massage', s3_desc: 'Chuyên gia tận tình thực hiện liệu pháp theo yêu cầu và thể trạng.',
       s4_title: 'Trà & Nhẹ', s4_desc: 'Kết thúc bằng tách trà gừng ấm áp và bánh ngọt nhẹ nhàng.',
     },
-    gallery: { label: 'Thư Viện Ảnh', title: 'Không Gian Anna Spa', viewMore: 'Xem Thêm Ảnh' },
+    gallery: { label: 'Thư Viện Ảnh', title: 'Không Gian Apollo Spa', viewMore: 'Xem Thêm Ảnh' },
     testimonials: {
       label: 'Khách Hàng Nói Gì', title: 'Đánh Giá Từ Khách Quốc Tế',
       award: 'Travelers\' Choice Award 2025 — TripAdvisor #46 of 661 Spas in Da Nang',
@@ -97,12 +97,12 @@ export default {
       relax_desc: 'Thai Massage 60 phút + Foot Massage 30 phút + Herbal tea. Gói thư giãn hoàn hảo cho một buổi chiều trọn vẹn.',
       royal_desc: 'Hot Stone Massage 90 phút + Classic Facial 45 phút + Body Scrub 30 phút + Herbal welcome ritual. Trải nghiệm hoàng gia trọn vẹn.',
       couple_desc: 'Dành cho cặp đôi: 2x Aroma Therapy Massage 90 phút trong phòng couple riêng tư + welcome drinks + herbal bath.',
-      anna_name: 'Massage Anna', relax_name: 'Gói Anna Thư Giãn',
-      royal_name: 'Gói Anna Hoàng Gia', couple_name: 'Gói Spa Đôi',
+      apollo_name: 'Massage Apollo', relax_name: 'Gói Apollo Thư Giãn',
+      royal_name: 'Gói Apollo Hoàng Gia', couple_name: 'Gói Spa Đôi',
       min: 'phút',
     },
     booking: {
-      label: 'Đặt Lịch Online', title: 'Đặt Lịch Tại Anna Spa',
+      label: 'Đặt Lịch Online', title: 'Đặt Lịch Tại Apollo Spa',
       subtitle: 'Điền thông tin dưới đây để đặt lịch. Chúng tôi sẽ gọi xác nhận trong vòng 30 phút.',
       contactInfo: 'Thông Tin Liên Hệ', notesTitle: 'Lưu Ý Đặt Lịch',
       notes: ['Đặt trước ít nhất 2 giờ để đảm bảo slot', 'Đến sớm 10 phút để chuẩn bị và thay đồ', 'Thông báo nếu bạn đang mang thai hoặc có vấn đề sức khỏe', 'Hủy/đổi lịch vui lòng báo trước 2 giờ', 'Giảm 10% khi đặt từ 2 liệu trình trở lên'],
@@ -118,7 +118,7 @@ export default {
       hours: '09:00 – 23:00 | Thứ 2 – Chủ Nhật',
     },
     galleryPage: {
-      label: 'Thư Viện Ảnh', title: 'Không Gian Anna Spa',
+      label: 'Thư Viện Ảnh', title: 'Không Gian Apollo Spa',
       all: 'Tất Cả', space: 'Không Gian', service: 'Dịch Vụ', nail: 'Nail Care',
     },
     contact: {
@@ -137,7 +137,7 @@ export default {
     footer: {
       desc: 'Trải nghiệm thư giãn đích thực với các liệu pháp spa truyền thống Việt Nam và quốc tế. Đội ngũ chuyên trị liệu chuyên nghiệp, không gian sang trọng và yên tĩnh.',
       explore: 'Khám Phá', servicesTitle: 'Dịch Vụ Nổi Bật', contactTitle: 'Liên Hệ',
-      rights: 'Anna Spa Da Nang. All rights reserved.', bookNow: 'Đặt Lịch Ngay',
+      rights: 'Apollo Spa Da Nang. All rights reserved.', bookNow: 'Đặt Lịch Ngay',
     },
     priceList: {
       label: 'Bảng Giá', title: 'Bảng Giá Dịch Vụ',
@@ -152,7 +152,7 @@ export default {
         {
           icon: '💆', title: 'Dịch Vụ Massage',
           services: [
-            { name: 'Massage Anna (Mixed Thái + Aroma)', options: [{dur: 90, price: '500.000'}, {dur: 120, price: '630.000'}] },
+            { name: 'Massage Apollo (Mixed Thái + Aroma)', options: [{dur: 90, price: '500.000'}, {dur: 120, price: '630.000'}] },
             { name: 'Massage Aroma Toàn Thân', options: [{dur: 60, price: '330.000'}, {dur: 90, price: '430.000'}, {dur: 120, price: '530.000'}] },
             { name: 'Massage Thái', options: [{dur: 60, price: '340.000'}, {dur: 90, price: '470.000'}, {dur: 120, price: '600.000'}] },
             { name: 'Massage Đá Nóng (Fourhand)', options: [{dur: 60, price: '650.000'}, {dur: 90, price: '850.000'}, {dur: 120, price: '1.050.000'}] },

@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="mb-5">
             <span className="font-playfair text-3xl font-bold text-white">
-              <span className="text-gold">ANNA</span> SPA
+              <span className="text-gold">APOLLO</span> SPA
             </span>
             <p className="text-[10px] tracking-[0.4em] uppercase text-dark-400 font-inter mt-1">Da Nang</p>
           </div>
@@ -86,8 +86,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:annaspa.danang@gmail.com" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
-                <IconEnvelope className="text-gold mt-0.5 shrink-0" size={14} />annaspa.danang@gmail.com
+              <a href="mailto:apollospa.danang@gmail.com" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
+                <IconEnvelope className="text-gold mt-0.5 shrink-0" size={14} />apollospa.danang@gmail.com
               </a>
             </li>
             <li className="flex gap-3 text-sm text-dark-300">

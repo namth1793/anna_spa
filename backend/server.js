@@ -17,8 +17,8 @@ app.use('/api/bookings', require('./routes/bookings'));
 app.use('/api/testimonials', require('./routes/testimonials'));
 app.use('/api/contact', require('./routes/contact'));
 
-app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'Anna Spa API' }));
+app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'Apollo Spa API' }));
 
 app.listen(PORT, () => {
-  console.log(`Anna Spa API running on port ${PORT}`);
+  console.log(`Apollo Spa API running on port ${PORT}`);
 });

@@ -140,7 +140,7 @@ export default function Home() {
           <div className="relative">
             <img
               src="/banner.jpg"
-              alt="Anna Spa interior"
+              alt="Apollo Spa interior"
               className="w-full h-[500px] object-cover"
             />
             <div className="absolute -bottom-6 -right-6 bg-gold p-6 text-center hidden md:block">
@@ -276,7 +276,7 @@ export default function Home() {
               <div key={i} className={`overflow-hidden ${i === 0 ? 'md:col-span-2 row-span-2' : ''}`}>
                 <img
                   src={img}
-                  alt={`Anna Spa gallery ${i + 1}`}
+                  alt={`Apollo Spa gallery ${i + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer"
                   style={{ height: i === 0 ? '420px' : '200px' }}
                 />
@@ -390,7 +390,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.contact_label')}</h4>
               <a href="tel:+840766668792" className="text-dark-400 text-sm hover:text-gold transition-colors block">0766 668 792</a>
-              <a href="mailto:annaspa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors block">annaspa.danang@gmail.com</a>
+              <a href="mailto:apollospa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors block">apollospa.danang@gmail.com</a>
             </div>
           </div>
         </div>

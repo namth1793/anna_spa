@@ -5,7 +5,7 @@ const fs = require('fs');
 const dataDir = path.join(__dirname, '../data');
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
-const db = new Database(path.join(dataDir, 'anna_spa.db'));
+const db = new Database(path.join(dataDir, 'apollo_spa.db'));
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS bookings (

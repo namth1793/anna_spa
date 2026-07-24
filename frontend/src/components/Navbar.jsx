@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { IconMenu, IconClose, IconPhone } from './Icons';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -46,7 +45,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-6 md:px-12 py-4">
         <Link to="/" className="flex flex-col leading-none select-none">
           <span className="font-playfair text-2xl font-bold text-white tracking-wide">
-            <span className="text-gold">ANNA</span> SPA
+            <span className="text-gold">APOLLO</span> SPA
           </span>
           <span className="text-[9px] tracking-[0.4em] uppercase text-dark-300 font-inter">Da Nang</span>
         </Link>
@@ -69,9 +68,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <LanguageSwitcher />
-          </div>
           <Link to="/dat-lich" className="hidden md:block btn-gold text-xs py-2.5 px-6">
             {t('nav.bookNow')}
           </Link>
@@ -104,7 +100,6 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-          <LanguageSwitcher mobile />
         </div>
       )}
     </header>
