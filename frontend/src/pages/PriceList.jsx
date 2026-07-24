@@ -23,7 +23,7 @@ export default function PriceList() {
       {/* Packages */}
       <div className="max-w-4xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
         {packages.map((pkg, i) => (
-          <div key={i} className="bg-dark-900 border border-dark-700 hover:border-gold/40 transition-colors p-6">
+          <div key={i} className="bg-dark-900 border border-dark-700 hover:border-gold/40 transition-colors p-6 flex flex-col h-full">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl">{pkg.icon}</span>
               <h3 className="font-playfair text-xl text-white">{pkg.name}</h3>
@@ -34,7 +34,7 @@ export default function PriceList() {
                 {pkg.price} <span className="text-dark-400 text-xs font-normal">{pl.vndUnit}</span>
               </span>
             </div>
-            <ul className="space-y-2 mb-5">
+            <ul className="space-y-2 mb-5 flex-1">
               {(pkg.desc || []).map((line, di) => (
                 <li key={di} className="flex items-start gap-2 text-dark-300 text-sm leading-relaxed">
                   <span className="text-gold mt-1 shrink-0">✦</span>
