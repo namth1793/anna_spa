@@ -102,7 +102,7 @@ export default function Booking() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold">📞</span>
-                  <a href="tel:+840766668792" className="hover:text-gold transition-colors">0766 668 792</a>
+                  <a href="tel:+84363194995" className="hover:text-gold transition-colors">0363 194 995</a>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold">✉️</span>
@@ -131,8 +131,8 @@ export default function Booking() {
             <div className="border border-gold/30 bg-gold/5 p-5">
               <p className="text-dark-300 text-sm text-center">
                 {t('booking.needAdvice')}<br />
-                <a href="tel:+840766668792" className="text-gold font-semibold text-base hover:text-gold-300 transition-colors flex items-center justify-center gap-2 mt-2">
-                  <IconPhone size={12} /> 0766 668 792
+                <a href="tel:+84363194995" className="text-gold font-semibold text-base hover:text-gold-300 transition-colors flex items-center justify-center gap-2 mt-2">
+                  <IconPhone size={12} /> 0363 194 995
                 </a>
               </p>
             </div>

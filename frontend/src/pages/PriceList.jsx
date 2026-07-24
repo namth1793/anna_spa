@@ -7,8 +7,8 @@ export default function PriceList() {
 
   if (!pl || typeof pl === 'string') return null;
 
-  const sections = pl.sections || [];
-  const combo = pl.combo || {};
+  const packages = pl.packages || [];
+  const benefits = pl.benefits || [];
 
   return (
     <div className="bg-dark-950 min-h-screen pt-28 pb-20">
@@ -19,111 +19,60 @@ export default function PriceList() {
         <div className="w-16 h-px bg-gold mx-auto" />
       </div>
 
-      {/* Info bar */}
-      <div className="max-w-4xl mx-auto px-6 md:px-12 mb-10">
-        <div className="bg-dark-900 border border-dark-700 p-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <div className="flex items-start gap-3">
-            <span className="text-gold mt-0.5">📍</span>
-            <span className="text-dark-300">{pl.address}</span>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-gold mt-0.5">🕐</span>
-            <span className="text-dark-300">{pl.hours}</span>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-gold mt-0.5">🎁</span>
-            <span className="text-gold font-medium">{pl.bonus}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Service sections */}
-      <div className="max-w-4xl mx-auto px-6 md:px-12 space-y-10">
-        {sections.map((section, si) => (
-          <div key={si}>
-            {/* Section header */}
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-2xl">{section.icon}</span>
-              <h2 className="font-playfair text-2xl text-white">{section.title}</h2>
-              <div className="flex-1 h-px bg-dark-700 ml-2" />
+      {/* Packages */}
+      <div className="max-w-4xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+        {packages.map((pkg, i) => (
+          <div key={i} className="bg-dark-900 border border-dark-700 hover:border-gold/40 transition-colors p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">{pkg.icon}</span>
+              <h3 className="font-playfair text-xl text-white">{pkg.name}</h3>
             </div>
-
-            {/* Services grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {(section.services || []).map((svc, vi) => (
-                <div key={vi} className="bg-dark-900 border border-dark-700 hover:border-gold/40 transition-colors p-5">
-                  <h3 className="text-white font-medium mb-3 text-sm leading-snug">{svc.name}</h3>
-                  <div className="space-y-1.5">
-                    {(svc.options || []).map((opt, oi) => (
-                      <div key={oi} className="flex items-center justify-between">
-                        <span className="text-dark-400 text-xs">
-                          {opt.dur} {pl.minUnit}
-                        </span>
-                        <span className="text-gold font-medium text-sm tabular-nums">
-                          {opt.price} <span className="text-dark-400 text-xs font-normal">{pl.vndUnit}</span>
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            <div className="flex items-center justify-between mb-4 pb-4 border-b border-dark-700">
+              <span className="text-dark-400 text-sm">{pkg.duration} {pl.minUnit}</span>
+              <span className="text-gold font-semibold text-lg tabular-nums">
+                {pkg.price} <span className="text-dark-400 text-xs font-normal">{pl.vndUnit}</span>
+              </span>
+            </div>
+            <ul className="space-y-2">
+              {(pkg.desc || []).map((line, di) => (
+                <li key={di} className="flex items-start gap-2 text-dark-300 text-sm leading-relaxed">
+                  <span className="text-gold mt-1 shrink-0">✦</span>
+                  {line}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
+      </div>
 
-        {/* Combo Signature - special section */}
-        <div className="border border-gold/40 bg-gradient-to-br from-dark-900 to-dark-950 p-7">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="text-2xl">🌿</span>
-            <h2 className="font-playfair text-2xl text-gold">{pl.comboTitle}</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Includes */}
-            <div>
-              <p className="text-dark-400 text-xs uppercase tracking-wider mb-3">{pl.comboIncludesLabel}</p>
-              <ul className="space-y-2">
-                {(pl.comboIncludes || []).map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-dark-200 text-sm">
-                    <span className="text-gold mt-1 shrink-0">✦</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Combo pricing */}
-            <div>
-              <p className="text-dark-400 text-xs uppercase tracking-wider mb-3">
-                {pl.minUnit === 'phút' ? 'Giá:' : pl.minUnit === 'mins' ? 'Price:' : pl.minUnit === '분' ? '가격:' : pl.minUnit === '分钟' ? '价格:' : '料金:'}
-              </p>
-              <div className="space-y-2">
-                {(combo.options || []).map((opt, i) => (
-                  <div key={i} className="flex items-center justify-between bg-dark-800/50 px-4 py-3 border border-dark-700">
-                    <span className="text-white font-medium">
-                      {opt.dur} {pl.minUnit}
-                    </span>
-                    <span className="text-gold font-semibold text-lg tabular-nums">
-                      {opt.price} <span className="text-dark-400 text-xs font-normal">{pl.vndUnit}</span>
-                    </span>
-                  </div>
+      {/* Benefits */}
+      <div className="max-w-4xl mx-auto px-6 md:px-12 mb-14">
+        <h2 className="font-playfair text-2xl text-gold text-center mb-8">{pl.benefitsTitle}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {benefits.map((b, i) => (
+            <div key={i} className="border border-dark-700 bg-dark-900 p-6 text-center">
+              <span className="text-3xl block mb-3">{b.icon}</span>
+              <h3 className="text-white font-medium mb-3">{b.title}</h3>
+              <div className="space-y-1">
+                {(b.items || []).map((item, ii) => (
+                  <p key={ii} className="text-dark-400 text-sm">{item}</p>
                 ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-        {/* CTA */}
-        <div className="text-center pt-4 space-y-4">
-          <Link to="/dat-lich" className="btn-gold py-3.5 px-10 text-sm inline-block">
-            {t('nav.bookNow')}
-          </Link>
-          <p className="text-dark-500 text-xs">
-            <a href="tel:+840766668792" className="hover:text-gold transition-colors">
-              0766 668 792
-            </a>
-          </p>
-        </div>
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-6 md:px-12 text-center pt-4 space-y-4">
+        <Link to="/dat-lich" className="btn-gold py-3.5 px-10 text-sm inline-block">
+          {t('nav.bookNow')}
+        </Link>
+        <p className="text-dark-500 text-xs">
+          <a href="tel:+84363194995" className="hover:text-gold transition-colors">
+            0363 194 995
+          </a>
+        </p>
       </div>
     </div>
   );

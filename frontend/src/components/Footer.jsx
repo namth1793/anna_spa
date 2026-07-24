@@ -5,7 +5,7 @@ import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconInsta
 export default function Footer() {
   const { t } = useTranslation();
   const pl = t('priceList', { returnObjects: true });
-  const mainServices = pl?.sections?.[0]?.services || [];
+  const mainServices = pl?.packages || [];
 
   return (
     <footer className="bg-dark-950 border-t border-dark-800">
@@ -43,6 +43,7 @@ export default function Footer() {
               { to: '/', label: t('nav.home') },
               { to: '/bang-gia', label: t('nav.price') },
               { to: '/thu-vien-anh', label: t('nav.gallery') },
+              { to: '/danh-gia', label: t('nav.reviews') },
               { to: '/dat-lich', label: t('nav.booking') },
               { to: '/lien-he', label: t('nav.contact') },
             ].map(l => (
@@ -61,7 +62,7 @@ export default function Footer() {
           <h4 className="text-white font-playfair text-lg mb-5">{t('footer.servicesTitle')}</h4>
           <div className="w-10 h-px bg-gold mb-5" />
           <ul className="space-y-3">
-            {[...mainServices, { name: pl?.comboTitle }].filter(s => s?.name).map((s, i) => (
+            {mainServices.filter(s => s?.name).map((s, i) => (
               <li key={i}>
                 <Link to="/bang-gia" className="text-dark-300 hover:text-gold text-sm transition-colors flex items-center gap-2">
                   <span className="w-3 h-px bg-gold/50" />{s.name}
@@ -81,8 +82,8 @@ export default function Footer() {
               <span>{t('info.address')}</span>
             </li>
             <li>
-              <a href="tel:+840766668792" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
-                <IconPhone className="text-gold mt-0.5 shrink-0" size={14} />0766 668 792
+              <a href="tel:+84363194995" className="flex gap-3 text-sm text-dark-300 hover:text-gold transition-colors">
+                <IconPhone className="text-gold mt-0.5 shrink-0" size={14} />0363 194 995
               </a>
             </li>
             <li>

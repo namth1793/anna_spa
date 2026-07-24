@@ -14,6 +14,7 @@ export default function Navbar() {
     { to: '/', label: t('nav.home') },
     { to: '/bang-gia', label: t('nav.price') },
     { to: '/thu-vien-anh', label: t('nav.gallery') },
+    { to: '/danh-gia', label: t('nav.reviews') },
     { to: '/dat-lich', label: t('nav.booking') },
     { to: '/lien-he', label: t('nav.contact') },
   ];
@@ -35,9 +36,9 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="hidden md:flex justify-between items-center px-8 py-2 border-b border-gold/20 text-xs text-dark-300">
         <span>{t('nav.openHours')}</span>
-        <a href="tel:+840766668792" className="flex items-center gap-2 text-gold hover:text-gold-300 transition-colors font-medium">
+        <a href="tel:+84363194995" className="flex items-center gap-2 text-gold hover:text-gold-300 transition-colors font-medium">
           <IconPhone size={10} />
-          0766 668 792
+          0363 194 995
         </a>
       </div>
 
@@ -95,8 +96,8 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a href="tel:+840766668792" className="flex items-center gap-2 text-gold text-sm">
-                <IconPhone size={14} /> 0766 668 792
+              <a href="tel:+84363194995" className="flex items-center gap-2 text-gold text-sm">
+                <IconPhone size={14} /> 0363 194 995
               </a>
             </li>
           </ul>

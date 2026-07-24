@@ -64,7 +64,7 @@ export default function Contact() {
                   <p className="text-white text-sm font-medium mb-1">{t('contact.address_label')}</p>
                   <p className="text-dark-400 text-sm">{t('info.address')}</p>
                   <a
-                    href="https://maps.google.com/?q=28+An+Thuong+26+Da+Nang"
+                    href={`https://maps.google.com/?q=${encodeURIComponent('03 Tôn Thất Thuyết, Cẩm Lệ, Đà Nẵng')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gold text-xs hover:underline mt-1 block"
@@ -79,7 +79,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.phone_label')}</p>
-                  <a href="tel:+840766668792" className="text-dark-400 text-sm hover:text-gold transition-colors">0766 668 792</a>
+                  <a href="tel:+84363194995" className="text-dark-400 text-sm hover:text-gold transition-colors">0363 194 995</a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -125,9 +125,8 @@ export default function Contact() {
             <div className="mt-10 aspect-video border border-dark-700 overflow-hidden">
               <iframe
                 title="Apollo Spa Da Nang Map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=108.2381,16.0352,108.2481,16.0420&layer=mapnik&marker=16.0386,108.2431"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent('03 Tôn Thất Thuyết, Cẩm Lệ, Đà Nẵng')}&output=embed`}
                 className="w-full h-full"
-                style={{ filter: 'invert(90%) hue-rotate(180deg)' }}
                 loading="lazy"
               />
             </div>

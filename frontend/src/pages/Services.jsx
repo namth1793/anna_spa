@@ -123,7 +123,7 @@ export default function Services() {
           <div className="border border-gold/30 bg-gold/5 p-6 text-center">
             <p className="text-dark-300 text-sm leading-relaxed">
               <span className="text-gold font-semibold">{t('servicesPage.note')}</span> <span className="text-gold">{t('servicesPage.discount')}</span>.{' '}
-              {t('servicesPage.loyalty')} <a href="tel:+840766668792" className="text-gold hover:underline">0766 668 792</a>.
+              {t('servicesPage.loyalty')} <a href="tel:+84363194995" className="text-gold hover:underline">0363 194 995</a>.
             </p>
           </div>
         </div>

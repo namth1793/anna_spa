@@ -1,19 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
 import {
-  IconStar, IconQuote, IconLeaf, IconFlame, IconSpa, IconHands,
+  IconStar, IconQuote,
   IconPhone, IconMapPin, IconClock, IconChevronLeft, IconChevronRight, IconAward
 } from '../components/Icons';
 
-const HERO_IMGS = [
-  '/slide1.jpg',
-  '/slide2.jpg',
-  'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80',
-  'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80',
-  'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80',
-];
+const HERO_IMG = '/img/hero.jpg';
 
 const GALLERY = [
   'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
@@ -25,34 +19,22 @@ const GALLERY = [
 
 export default function Home() {
   const { t } = useTranslation();
-  const [slide, setSlide] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
   const [tSlide, setTSlide] = useState(0);
-  const timerRef = useRef(null);
-
-  const HERO_SLIDES = [
-    { bg: HERO_IMGS[0], title: t('hero.s1_title'), sub: t('hero.s1_sub') },
-    { bg: HERO_IMGS[1], title: t('hero.s2_title'), sub: t('hero.s2_sub') },
-    { bg: HERO_IMGS[2], title: t('hero.s3_title'), sub: t('hero.s3_sub') },
-    { bg: HERO_IMGS[3], title: t('hero.s1_title'), sub: t('hero.s1_sub') },
-    { bg: HERO_IMGS[4], title: t('hero.s2_title'), sub: t('hero.s2_sub') },
-  ];
 
   const pl = t('priceList', { returnObjects: true });
-  const s0 = pl?.sections?.[0]?.services || [];
-  const s1 = pl?.sections?.[1]?.services || [];
-  const vnd = pl?.vndUnit || 'VND';
+  const packages = pl?.packages || [];
+  const vnd = pl?.vndUnit || 'VNĐ';
   const minUnit = pl?.minUnit || 'phút';
   const from = t('services.from');
 
-  const SERVICES = [
-    { icon: <IconSpa className="text-3xl text-gold" />,   title: s0[0]?.name, desc: t('services.aroma_desc'),   price: `${from} ${s0[0]?.options?.[0]?.price} ${vnd}`, duration: `${s0[0]?.options?.[0]?.dur} ${minUnit}` },
-    { icon: <IconHands className="text-3xl text-gold" />, title: s0[2]?.name, desc: t('services.thai_desc'),   price: `${from} ${s0[2]?.options?.[0]?.price} ${vnd}`, duration: `${s0[2]?.options?.[0]?.dur} ${minUnit}` },
-    { icon: <IconFlame className="text-3xl text-gold" />, title: s0[3]?.name, desc: t('services.stone_desc'),  price: `${from} ${s0[3]?.options?.[0]?.price} ${vnd}`, duration: `${s0[3]?.options?.[0]?.dur} ${minUnit}` },
-    { icon: <IconLeaf className="text-3xl text-gold" />,  title: s0[1]?.name, desc: t('services.aroma_desc'),  price: `${from} ${s0[1]?.options?.[0]?.price} ${vnd}`, duration: `${s0[1]?.options?.[0]?.dur} ${minUnit}` },
-    { icon: <IconHands className="text-3xl text-gold" />, title: s1[0]?.name, desc: t('services.thai_desc'),   price: `${from} ${s1[0]?.options?.[0]?.price} ${vnd}`, duration: `${s1[0]?.options?.[0]?.dur} ${minUnit}` },
-    { icon: <IconSpa className="text-3xl text-gold" />,   title: pl?.comboTitle, desc: (pl?.comboIncludes || []).slice(0, 3).join(' · '), price: `${from} ${pl?.combo?.options?.[0]?.price} ${vnd}`, duration: `${pl?.combo?.options?.[0]?.dur} ${minUnit}` },
-  ];
+  const SERVICES = packages.map(pkg => ({
+    icon: <span className="text-3xl">{pkg.icon}</span>,
+    title: pkg.name,
+    desc: (pkg.desc || []).join(' '),
+    price: `${from} ${pkg.price} ${vnd}`,
+    duration: `${pkg.duration} ${minUnit}`,
+  }));
 
   const STATS = [
     { num: '5.000+', label: t('stats.customers') },
@@ -62,10 +44,8 @@ export default function Home() {
   ];
 
   const WHY = [
-    { icon: '🌿', title: t('why.natural_title'), desc: t('why.natural_desc') },
     { icon: '👨‍⚕️', title: t('why.expert_title'), desc: t('why.expert_desc') },
     { icon: '✨', title: t('why.space_title'), desc: t('why.space_desc') },
-    { icon: '🏆', title: t('why.award_title'), desc: t('why.award_desc') },
   ];
 
   const FLOW = [
@@ -74,13 +54,6 @@ export default function Home() {
     { step: '03', title: t('flow.s3_title'), desc: t('flow.s3_desc') },
     { step: '04', title: t('flow.s4_title'), desc: t('flow.s4_desc') },
   ];
-
-  useEffect(() => {
-    timerRef.current = setInterval(() => {
-      setSlide(s => (s + 1) % HERO_SLIDES.length);
-    }, 5000);
-    return () => clearInterval(timerRef.current);
-  }, []);
 
   useEffect(() => {
     api.get('/api/testimonials').then(r => setTestimonials(r.data)).catch(() => {});
@@ -95,41 +68,24 @@ export default function Home() {
     <>
       {/* ── HERO ── */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
-        {HERO_SLIDES.map((s, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <img
-              src={s.bg}
-              alt=""
-              className="w-full h-full object-cover scale-105"
-              style={{ transform: i === slide ? 'scale(1)' : 'scale(1.05)', transition: 'transform 6s ease' }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/80" />
-          </div>
-        ))}
+        <img
+          src={HERO_IMG}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/80" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
           <p className="section-subtitle text-gold mb-4 text-shadow">{t('hero.brand')}</p>
           <h1 className="font-playfair text-5xl md:text-7xl text-white font-bold leading-tight mb-4 text-shadow">
-            {HERO_SLIDES[slide].title}
+            {t('hero.s1_title')}
           </h1>
           <p className="text-dark-200 text-base md:text-xl mb-10 max-w-xl text-shadow font-light">
-            {HERO_SLIDES[slide].sub}
+            {t('hero.s1_sub')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/dat-lich" className="btn-gold">{t('hero.ctaBook')}</Link>
             <Link to="/bang-gia" className="btn-outline-gold">{t('hero.ctaExplore')}</Link>
-          </div>
-          <div className="absolute bottom-8 flex gap-2">
-            {HERO_SLIDES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setSlide(i)}
-                className={`h-0.5 transition-all duration-500 ${i === slide ? 'w-10 bg-gold' : 'w-4 bg-white/40'}`}
-              />
-            ))}
           </div>
         </div>
       </section>
@@ -139,7 +95,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src="/banner.jpg"
+              src="/img/welcome.jpg"
               alt="Apollo Spa interior"
               className="w-full h-[500px] object-cover"
             />
@@ -190,7 +146,7 @@ export default function Home() {
             <div className="gold-divider" />
             <p className="text-dark-400 max-w-xl mx-auto mt-4 text-sm leading-relaxed">{t('services.subtitle')}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {SERVICES.map((s, i) => (
               <div key={i} className="card-dark p-8 group cursor-pointer">
                 <div className="mb-5">{s.icon}</div>
@@ -229,7 +185,7 @@ export default function Home() {
             <h2 className="section-title mb-2">{t('why.title')}</h2>
             <div className="gold-divider" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {WHY.map((w, i) => (
               <div key={i} className="text-center">
                 <div className="text-5xl mb-5">{w.icon}</div>
@@ -361,7 +317,7 @@ export default function Home() {
           <p className="text-dark-300 max-w-xl mx-auto mb-10 leading-relaxed">{t('cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/dat-lich" className="btn-gold">{t('cta.bookOnline')}</Link>
-            <a href="tel:+840766668792" className="btn-outline-gold flex items-center justify-center gap-2">
+            <a href="tel:+84363194995" className="btn-outline-gold flex items-center justify-center gap-2">
               <IconPhone size={12} /> {t('cta.callNow')}
             </a>
           </div>
@@ -389,7 +345,7 @@ export default function Home() {
             <IconPhone className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.contact_label')}</h4>
-              <a href="tel:+840766668792" className="text-dark-400 text-sm hover:text-gold transition-colors block">0766 668 792</a>
+              <a href="tel:+84363194995" className="text-dark-400 text-sm hover:text-gold transition-colors block">0363 194 995</a>
               <a href="mailto:apollospa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors block">apollospa.danang@gmail.com</a>
             </div>
           </div>
