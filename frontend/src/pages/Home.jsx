@@ -10,11 +10,15 @@ import {
 const HERO_IMG = '/img/hero.jpg';
 
 const GALLERY = [
-  'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
-  'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80',
-  'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80',
-  'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80',
-  'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80',
+  '/img/gallery/1.jpg',
+  '/img/gallery/2.jpg',
+  '/img/gallery/3.jpg',
+  '/img/gallery/4.jpg',
+  '/img/gallery/5.jpg',
+  '/img/gallery/6.jpg',
+  '/img/gallery/7.jpg',
+  '/img/gallery/8.jpg',
+  '/img/gallery/9.jpg',
 ];
 
 export default function Home() {
@@ -238,9 +242,6 @@ export default function Home() {
                 />
               </div>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/thu-vien-anh" className="btn-outline-gold">{t('gallery.viewMore')}</Link>
           </div>
         </div>
       </section>

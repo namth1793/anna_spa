@@ -5,7 +5,6 @@ import ScrollToTop from './components/ScrollToTop';
 import AdminRoute from './components/AdminRoute';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
-import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import PriceList from './pages/PriceList';
 import Reviews from './pages/Reviews';
@@ -20,7 +19,6 @@ function MainLayout() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dat-lich" element={<Booking />} />
-          <Route path="/thu-vien-anh" element={<Gallery />} />
           <Route path="/lien-he" element={<Contact />} />
           <Route path="/bang-gia" element={<PriceList />} />
           <Route path="/danh-gia" element={<Reviews />} />

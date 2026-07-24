@@ -1,7 +1,7 @@
 export default {
   translation: {
     nav: {
-      home: 'Trang Chủ', services: 'Dịch Vụ', gallery: 'Thư Viện Ảnh',
+      home: 'Trang Chủ', services: 'Dịch Vụ',
       booking: 'Đặt Lịch', contact: 'Liên Hệ', reviews: 'Đánh Giá',
       openHours: 'Mở cửa: 08:00 – 23:00 | Thứ 2 – Chủ Nhật',
       bookNow: 'Đặt Lịch Ngay',
@@ -114,9 +114,6 @@ export default {
       errRequired: 'Vui lòng điền đầy đủ các trường bắt buộc (*).',
       errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0363 194 995.',
       hours: '08:00 – 23:00 | Thứ 2 – Chủ Nhật',
-    },
-    galleryPage: {
-      label: 'Thư Viện Ảnh', title: 'Không Gian Apollo Spa',
     },
     reviewsPage: {
       label: 'Khách Hàng Nói Gì', title: 'Đánh Giá Khách Hàng',

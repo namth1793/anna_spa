@@ -13,7 +13,6 @@ export default function Navbar() {
   const links = [
     { to: '/', label: t('nav.home') },
     { to: '/bang-gia', label: t('nav.price') },
-    { to: '/thu-vien-anh', label: t('nav.gallery') },
     { to: '/danh-gia', label: t('nav.reviews') },
     { to: '/dat-lich', label: t('nav.booking') },
     { to: '/lien-he', label: t('nav.contact') },
