@@ -38,6 +38,15 @@ export default {
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #C9A96E 0%, #e2c48a 50%, #C9A96E 100%)',
       },
+      keyframes: {
+        'bounce-gentle': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+      },
+      animation: {
+        'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
