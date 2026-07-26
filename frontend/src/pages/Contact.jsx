@@ -79,7 +79,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium mb-1">{t('contact.phone_label')}</p>
-                  <a href="tel:+84363194995" className="text-dark-400 text-sm hover:text-gold transition-colors">0363 194 995</a>
+                  <a href="tel:+84397807877" className="text-dark-400 text-sm hover:text-gold transition-colors">0397 807 877</a>
                 </div>
               </li>
               <li className="flex gap-4">

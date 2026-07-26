@@ -8,6 +8,7 @@ import {
 } from '../components/Icons';
 
 const HERO_IMG = '/img/hero.jpg';
+const HERO_IMG_MOBILE = '/img/hero-mobile.jpg';
 
 const GALLERY = [
   '/img/gallery/1.jpg',
@@ -72,11 +73,14 @@ export default function Home() {
     <>
       {/* ── HERO ── */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
-        <img
-          src={HERO_IMG}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={HERO_IMG_MOBILE} />
+          <img
+            src={HERO_IMG}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/80" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
@@ -318,7 +322,7 @@ export default function Home() {
           <p className="text-dark-300 max-w-xl mx-auto mb-10 leading-relaxed">{t('cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/dat-lich" className="btn-gold">{t('cta.bookOnline')}</Link>
-            <a href="tel:+84363194995" className="btn-outline-gold flex items-center justify-center gap-2">
+            <a href="tel:+84397807877" className="btn-outline-gold flex items-center justify-center gap-2">
               <IconPhone size={12} /> {t('cta.callNow')}
             </a>
           </div>
@@ -346,7 +350,7 @@ export default function Home() {
             <IconPhone className="text-gold text-2xl mt-1 shrink-0" />
             <div>
               <h4 className="text-white font-semibold mb-1">{t('info.contact_label')}</h4>
-              <a href="tel:+84363194995" className="text-dark-400 text-sm hover:text-gold transition-colors block">0363 194 995</a>
+              <a href="tel:+84397807877" className="text-dark-400 text-sm hover:text-gold transition-colors block">0397 807 877</a>
               <a href="mailto:apollospa.danang@gmail.com" className="text-dark-400 text-sm hover:text-gold transition-colors block">apollospa.danang@gmail.com</a>
             </div>
           </div>

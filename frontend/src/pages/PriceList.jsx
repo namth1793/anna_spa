@@ -76,8 +76,8 @@ export default function PriceList() {
           {t('nav.bookNow')}
         </Link>
         <p className="text-dark-500 text-xs">
-          <a href="tel:+84363194995" className="hover:text-gold transition-colors">
-            0363 194 995
+          <a href="tel:+84397807877" className="hover:text-gold transition-colors">
+            0397 807 877
           </a>
         </p>
       </div>

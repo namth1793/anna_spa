@@ -112,7 +112,7 @@ export default {
       submit: 'XÁC NHẬN ĐẶT LỊCH', submitting: 'Đang Gửi...',
       successTitle: 'Đặt Lịch Thành Công!', bookAnother: 'Đặt Lịch Khác',
       errRequired: 'Vui lòng điền đầy đủ các trường bắt buộc (*).',
-      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0363 194 995.',
+      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0397 807 877.',
       hours: '08:00 – 23:00 | Thứ 2 – Chủ Nhật',
     },
     reviewsPage: {
@@ -130,7 +130,7 @@ export default {
       submit: 'GỬI TIN NHẮN', submitting: 'Đang Gửi...',
       successTitle: 'Gửi Thành Công!', sendAnother: 'Gửi Tin Nhắn Khác',
       errRequired: 'Vui lòng điền tên, email và nội dung tin nhắn.',
-      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0363 194 995.',
+      errGeneral: 'Có lỗi xảy ra. Vui lòng gọi trực tiếp 0397 807 877.',
     },
     footer: {
       desc: 'Trải nghiệm thư giãn đích thực với các liệu pháp spa truyền thống Việt Nam và quốc tế. Đội ngũ chuyên trị liệu chuyên nghiệp, không gian sang trọng và yên tĩnh.',
