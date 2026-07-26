@@ -98,6 +98,13 @@ export const IconInstagram = ({ size, className }) => svg(
   size, className, '0 0 24 24'
 );
 
+export const IconZalo = ({ size, className }) => (
+  <svg width={size || '1em'} height={size || '1em'} viewBox="0 0 48 48" className={className} aria-hidden="true">
+    <circle cx="24" cy="24" r="24" fill="#0068FF" />
+    <text x="24" y="31" textAnchor="middle" fontSize="19" fontWeight="700" fontFamily="Arial, sans-serif" fill="#fff">Zalo</text>
+  </svg>
+);
+
 export const IconTripadvisor = ({ size, className }) => svg(
   <><circle cx="6.5" cy="13.5" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.8"/><circle cx="17.5" cy="13.5" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="M12 7c-3 0-5.5.9-7.5 2.5h15C17.5 7.9 15 7 12 7z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><circle cx="6.5" cy="13.5" r="1.2"/><circle cx="17.5" cy="13.5" r="1.2"/></>,
   size, className, '0 0 24 24'

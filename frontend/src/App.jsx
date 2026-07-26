@@ -4,6 +4,7 @@ import api from './lib/api';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ZaloButton from './components/ZaloButton';
 import AdminRoute from './components/AdminRoute';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
@@ -27,6 +28,7 @@ function MainLayout() {
         </Routes>
       </main>
       <Footer />
+      <ZaloButton />
     </>
   );
 }
