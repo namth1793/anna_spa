@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IconClose } from '../components/Icons';
+import useSiteImages, { pickUrl, pickUrls } from '../lib/useSiteImages';
 
 const FEEDBACK_IMAGES = [
   '/img/feedback/1.jpg',
@@ -13,13 +14,16 @@ const FEEDBACK_IMAGES = [
 export default function Reviews() {
   const { t } = useTranslation();
   const [lightbox, setLightbox] = useState(null);
+  const siteImages = useSiteImages();
+  const headerUrl = pickUrl(siteImages, 'reviews_header', 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80');
+  const feedbackUrls = pickUrls(siteImages, 'feedback', FEEDBACK_IMAGES);
 
   return (
     <>
       {/* Header */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80"
+          src={headerUrl}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -34,7 +38,7 @@ export default function Reviews() {
 
       <section className="py-16 bg-dark-950">
         <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {FEEDBACK_IMAGES.map((src, i) => (
+          {feedbackUrls.map((src, i) => (
             <div
               key={i}
               className="border border-dark-700 hover:border-gold/40 transition-colors cursor-pointer overflow-hidden"

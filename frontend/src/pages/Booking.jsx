@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
+import useSiteImages, { pickUrl } from '../lib/useSiteImages';
 import { IconCheck, IconPhone } from '../components/Icons';
 
 const SERVICE_KEYS = [
@@ -40,6 +41,8 @@ const today = new Date().toISOString().split('T')[0];
 export default function Booking() {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
+  const siteImages = useSiteImages();
+  const headerUrl = pickUrl(siteImages, 'booking_header', 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80');
   const pl = t('priceList', { returnObjects: true });
   const PACKAGE_OPTIONS = (pl?.packages || []).map(p => ({ label: p.name, value: p.name }));
   const SERVICES = [...PACKAGE_OPTIONS, ...SERVICE_KEYS.map(s => ({ label: t(`servicesPage.${s.key}`), value: s.value }))];
@@ -79,7 +82,7 @@ export default function Booking() {
       {/* Header */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80"
+          src={headerUrl}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

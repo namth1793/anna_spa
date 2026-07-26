@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
+import useSiteImages, { pickUrl, pickUrls } from '../lib/useSiteImages';
 import {
   IconStar, IconQuote,
   IconPhone, IconMapPin, IconClock, IconChevronLeft, IconChevronRight, IconAward
@@ -26,6 +27,12 @@ export default function Home() {
   const { t } = useTranslation();
   const [testimonials, setTestimonials] = useState([]);
   const [tSlide, setTSlide] = useState(0);
+  const siteImages = useSiteImages();
+  const heroUrl = pickUrl(siteImages, 'hero', HERO_IMG);
+  const heroMobileUrl = pickUrl(siteImages, 'hero_mobile', HERO_IMG_MOBILE);
+  const welcomeUrl = pickUrl(siteImages, 'welcome', '/img/welcome.jpg');
+  const ctaUrl = pickUrl(siteImages, 'home_cta', 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&q=80');
+  const galleryUrls = pickUrls(siteImages, 'gallery', GALLERY);
 
   const pl = t('priceList', { returnObjects: true });
   const packages = pl?.packages || [];
@@ -74,9 +81,9 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
         <picture>
-          <source media="(max-width: 767px)" srcSet={HERO_IMG_MOBILE} />
+          <source media="(max-width: 767px)" srcSet={heroMobileUrl} />
           <img
-            src={HERO_IMG}
+            src={heroUrl}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -103,7 +110,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src="/img/welcome.jpg"
+              src={welcomeUrl}
               alt="Apollo Spa interior"
               className="w-full h-[500px] object-cover"
             />
@@ -236,7 +243,7 @@ export default function Home() {
             <div className="gold-divider" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {GALLERY.map((img, i) => (
+            {galleryUrls.map((img, i) => (
               <div key={i} className={`overflow-hidden ${i === 0 ? 'md:col-span-2 row-span-2' : ''}`}>
                 <img
                   src={img}
@@ -310,7 +317,7 @@ export default function Home() {
       {/* ── BOOKING CTA ── */}
       <section className="relative py-28 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&q=80"
+          src={ctaUrl}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

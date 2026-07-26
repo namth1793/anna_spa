@@ -19,11 +19,126 @@ function authHeaders() {
   return { Authorization: `Bearer ${localStorage.getItem('apollo_admin_token')}` };
 }
 
+const IMAGE_SECTIONS = [
+  {
+    group: 'Trang Chủ',
+    slots: [
+      { key: 'hero', label: 'Banner (Desktop)', multi: false },
+      { key: 'hero_mobile', label: 'Banner (Mobile)', multi: false },
+      { key: 'welcome', label: 'Ảnh Mục Chào Mừng', multi: false },
+      { key: 'home_cta', label: 'Ảnh Nền Mục "Sẵn Sàng Thư Giãn?"', multi: false },
+      { key: 'gallery', label: 'Thư Viện Ảnh', multi: true },
+    ],
+  },
+  {
+    group: 'Trang Liên Hệ',
+    slots: [{ key: 'contact_header', label: 'Ảnh Nền Header', multi: false }],
+  },
+  {
+    group: 'Trang Đặt Lịch',
+    slots: [{ key: 'booking_header', label: 'Ảnh Nền Header', multi: false }],
+  },
+  {
+    group: 'Trang Đánh Giá',
+    slots: [
+      { key: 'reviews_header', label: 'Ảnh Nền Header', multi: false },
+      { key: 'feedback', label: 'Ảnh Feedback Khách Hàng', multi: true },
+    ],
+  },
+  {
+    group: 'Khác',
+    slots: [{ key: 'favicon', label: 'Favicon', multi: false }],
+  },
+];
+
+function ImageSlot({ label, images, uploading, onUpload, onDelete }) {
+  const img = images?.[0];
+  const inputId = `img-${label}`.replace(/\s+/g, '-');
+  return (
+    <div>
+      <p className="text-dark-300 text-sm mb-2">{label}</p>
+      <div className="relative group w-full aspect-video bg-dark-800 border border-dark-700 overflow-hidden">
+        {img ? (
+          <img src={img.url} alt={label} className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-dark-600 text-xs">Chưa có ảnh</div>
+        )}
+        <label
+          htmlFor={inputId}
+          className="absolute inset-0 bg-black/0 group-hover:bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all cursor-pointer text-white text-xs uppercase tracking-wider"
+        >
+          {uploading ? 'Đang tải...' : 'Đổi ảnh'}
+        </label>
+        <input
+          id={inputId}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          disabled={uploading}
+          onChange={e => { const f = e.target.files?.[0]; if (f) onUpload(f); e.target.value = ''; }}
+        />
+        {img && (
+          <button
+            onClick={() => onDelete(img.id)}
+            className="absolute top-1.5 right-1.5 w-6 h-6 bg-black/70 hover:bg-red-600 text-white text-xs flex items-center justify-center transition-colors"
+            title="Xoá ảnh"
+          >
+            ×
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ImageGrid({ label, images, uploading, onUpload, onDelete }) {
+  const inputId = `img-multi-${label}`.replace(/\s+/g, '-');
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <p className="text-dark-300 text-sm">{label}</p>
+        <span className="text-dark-500 text-xs">{images?.length || 0} ảnh</span>
+      </div>
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
+        {(images || []).map(img => (
+          <div key={img.id} className="relative group aspect-square bg-dark-800 border border-dark-700 overflow-hidden">
+            <img src={img.url} alt="" className="w-full h-full object-cover" />
+            <button
+              onClick={() => onDelete(img.id)}
+              className="absolute top-1 right-1 w-5 h-5 bg-black/70 hover:bg-red-600 text-white text-xs flex items-center justify-center transition-colors"
+              title="Xoá ảnh"
+            >
+              ×
+            </button>
+          </div>
+        ))}
+        <label
+          htmlFor={inputId}
+          className="aspect-square border border-dashed border-dark-600 hover:border-gold flex items-center justify-center cursor-pointer text-dark-500 hover:text-gold text-xl transition-colors"
+        >
+          {uploading ? '…' : '+'}
+        </label>
+        <input
+          id={inputId}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          disabled={uploading}
+          onChange={e => { const f = e.target.files?.[0]; if (f) onUpload(f); e.target.value = ''; }}
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function AdminDashboard() {
   const [tab, setTab] = useState('bookings');
   const [bookings, setBookings] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
+  const [images, setImages] = useState({});
+  const [uploadingSlot, setUploadingSlot] = useState(null);
+  const [imageError, setImageError] = useState('');
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [newT, setNewT] = useState({ name: '', country: '', flag: '🌍', rating: 5, content: '' });
@@ -33,14 +148,16 @@ export default function AdminDashboard() {
     setLoading(true);
     try {
       const headers = authHeaders();
-      const [b, c, t] = await Promise.all([
+      const [b, c, t, i] = await Promise.all([
         api.get('/api/bookings', { headers }),
         api.get('/api/contact', { headers }),
         api.get('/api/testimonials'),
+        api.get('/api/images'),
       ]);
       setBookings(b.data);
       setContacts(c.data);
       setTestimonials(t.data);
+      setImages(i.data);
     } catch (err) {
       if (err.response?.status === 401) {
         localStorage.removeItem('apollo_admin_token');
@@ -89,6 +206,31 @@ export default function AdminDashboard() {
     setShowAddForm(false);
   };
 
+  const uploadImage = async (section, file) => {
+    setImageError('');
+    setUploadingSlot(section);
+    const formData = new FormData();
+    formData.append('image', file);
+    try {
+      const res = await api.post(`/api/images/${section}`, formData, { headers: authHeaders() });
+      setImages(prev => {
+        const list = prev[section] || [];
+        const isMulti = IMAGE_SECTIONS.flatMap(g => g.slots).find(s => s.key === section)?.multi;
+        return { ...prev, [section]: isMulti ? [...list, res.data] : [res.data] };
+      });
+    } catch (err) {
+      setImageError(err.response?.data?.error || 'Tải ảnh lên thất bại.');
+    } finally {
+      setUploadingSlot(null);
+    }
+  };
+
+  const deleteImage = async (section, id) => {
+    if (!window.confirm('Xoá ảnh này?')) return;
+    await api.delete(`/api/images/${id}`, { headers: authHeaders() });
+    setImages(prev => ({ ...prev, [section]: (prev[section] || []).filter(img => img.id !== id) }));
+  };
+
   const fmtDate = (str) => new Date(str).toLocaleDateString('vi-VN', {
     day: '2-digit', month: '2-digit', year: 'numeric',
   });
@@ -100,6 +242,7 @@ export default function AdminDashboard() {
     { key: 'bookings',     label: 'Đặt lịch',  count: bookings.length },
     { key: 'contacts',     label: 'Liên hệ',   count: contacts.length },
     { key: 'testimonials', label: 'Đánh giá',  count: testimonials.length },
+    { key: 'images',       label: 'Hình ảnh',  count: Object.values(images).flat().length },
   ];
 
   return (
@@ -387,6 +530,51 @@ export default function AdminDashboard() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        )}
+
+        {/* ===== IMAGES ===== */}
+        {!loading && tab === 'images' && (
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="font-playfair text-xl">Quản lý hình ảnh</h2>
+              <span className="text-dark-400 text-sm">Ảnh mới sẽ được lưu trên Cloudinary</span>
+            </div>
+
+            {imageError && (
+              <p className="text-red-400 text-sm border border-red-400/30 bg-red-400/5 p-3 mb-6">{imageError}</p>
+            )}
+
+            <div className="space-y-10">
+              {IMAGE_SECTIONS.map(group => (
+                <div key={group.group}>
+                  <h3 className="font-playfair text-lg text-gold mb-4">{group.group}</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {group.slots.map(slot => (
+                      <div key={slot.key} className={slot.multi ? 'md:col-span-2' : ''}>
+                        {slot.multi ? (
+                          <ImageGrid
+                            label={slot.label}
+                            images={images[slot.key]}
+                            uploading={uploadingSlot === slot.key}
+                            onUpload={file => uploadImage(slot.key, file)}
+                            onDelete={id => deleteImage(slot.key, id)}
+                          />
+                        ) : (
+                          <ImageSlot
+                            label={slot.label}
+                            images={images[slot.key]}
+                            uploading={uploadingSlot === slot.key}
+                            onUpload={file => uploadImage(slot.key, file)}
+                            onDelete={id => deleteImage(slot.key, id)}
+                          />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}

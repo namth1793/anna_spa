@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
+import useSiteImages, { pickUrl } from '../lib/useSiteImages';
 import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconTripadvisor, IconCheck } from '../components/Icons';
 
 export default function Contact() {
   const { t } = useTranslation();
+  const siteImages = useSiteImages();
+  const headerUrl = pickUrl(siteImages, 'contact_header', 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&q=80');
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [msg, setMsg] = useState('');
@@ -35,7 +38,7 @@ export default function Contact() {
       {/* Header */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&q=80"
+          src={headerUrl}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

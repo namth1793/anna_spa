@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
@@ -16,6 +17,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/bookings', require('./routes/bookings'));
 app.use('/api/testimonials', require('./routes/testimonials'));
 app.use('/api/contact', require('./routes/contact'));
+app.use('/api/images', require('./routes/images'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'Apollo Spa API' }));
 

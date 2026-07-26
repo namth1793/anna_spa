@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import api from './lib/api';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -30,6 +32,16 @@ function MainLayout() {
 }
 
 export default function App() {
+  useEffect(() => {
+    api.get('/api/images').then(res => {
+      const url = res.data?.favicon?.[0]?.url;
+      if (url) {
+        const link = document.querySelector("link[rel='icon']");
+        if (link) link.href = url;
+      }
+    }).catch(() => {});
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
