@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconInstagram, IconTripadvisor } from './Icons';
+import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconInstagram, IconTripadvisor, IconTiktok } from './Icons';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -20,9 +20,13 @@ export default function Footer() {
           </div>
           <p className="text-dark-300 text-sm leading-relaxed mb-6">{t('footer.desc')}</p>
           <div className="flex gap-3">
-            <a href="https://www.facebook.com/dragonspadanang/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.facebook.com/share/1BbrmxVGKJ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
               className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
               <IconFacebook size={14} />
+            </a>
+            <a href="https://tiktok.com/@apollospa.thugiannam" target="_blank" rel="noopener noreferrer"
+              className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
+              <IconTiktok size={14} />
             </a>
             <a href="#" className="w-9 h-9 border border-dark-700 flex items-center justify-center text-dark-400 hover:border-gold hover:text-gold transition-colors">
               <IconInstagram size={14} />

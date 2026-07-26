@@ -93,6 +93,11 @@ export const IconFacebook = ({ size, className }) => svg(
   size, className
 );
 
+export const IconTiktok = ({ size, className }) => svg(
+  <path d="M16.6 5.82a4.28 4.28 0 01-3.15-1.4V14.6a5.1 5.1 0 11-4.4-5.05v2.6a2.5 2.5 0 102.15 2.47V2h2.5a4.27 4.27 0 001.9 3.55 4.26 4.26 0 002.4.75v2.5a6.75 6.75 0 01-1.4-.15v-.03z" />,
+  size, className
+);
+
 export const IconInstagram = ({ size, className }) => svg(
   <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" strokeWidth="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></>,
   size, className, '0 0 24 24'
@@ -102,6 +107,20 @@ export const IconZalo = ({ size, className }) => (
   <svg width={size || '1em'} height={size || '1em'} viewBox="0 0 48 48" className={className} aria-hidden="true">
     <circle cx="24" cy="24" r="24" fill="#0068FF" />
     <text x="24" y="31" textAnchor="middle" fontSize="19" fontWeight="700" fontFamily="Arial, sans-serif" fill="#fff">Zalo</text>
+  </svg>
+);
+
+export const IconFacebookBadge = ({ size, className }) => (
+  <svg width={size || '1em'} height={size || '1em'} viewBox="0 0 48 48" className={className} aria-hidden="true">
+    <circle cx="24" cy="24" r="24" fill="#1877F2" />
+    <path d="M27 16h3v-5h-3c-3.31 0-6 2.69-6 6v3h-3v5h3v11h5V25h3.5l1-5H26v-2c0-1.1.9-2 2-2z" fill="#fff" />
+  </svg>
+);
+
+export const IconTiktokBadge = ({ size, className }) => (
+  <svg width={size || '1em'} height={size || '1em'} viewBox="0 0 48 48" className={className} aria-hidden="true">
+    <circle cx="24" cy="24" r="24" fill="#111" />
+    <path d="M27.5 14.5c.6 2.1 2.2 3.7 4.5 4v3.3c-1.7 0-3.3-.5-4.6-1.4v7.2a6.6 6.6 0 11-6.6-6.6c.25 0 .5.02.75.05v3.35a3.25 3.25 0 103.35 3.2V13h2.6v1.5z" fill="#fff" />
   </svg>
 );
 

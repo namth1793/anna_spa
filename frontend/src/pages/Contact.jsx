@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import api from '../lib/api';
 import useSiteImages, { pickUrl } from '../lib/useSiteImages';
-import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconTripadvisor, IconCheck } from '../components/Icons';
+import { IconPhone, IconEnvelope, IconMapPin, IconClock, IconFacebook, IconTripadvisor, IconTiktok, IconCheck } from '../components/Icons';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -107,12 +107,20 @@ export default function Contact() {
 
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/dragonspadanang/"
+                href="https://www.facebook.com/share/1BbrmxVGKJ/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 border border-dark-700 px-4 py-2 text-sm text-dark-400 hover:border-gold hover:text-gold transition-colors"
               >
                 <IconFacebook /> Facebook
+              </a>
+              <a
+                href="https://tiktok.com/@apollospa.thugiannam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border border-dark-700 px-4 py-2 text-sm text-dark-400 hover:border-gold hover:text-gold transition-colors"
+              >
+                <IconTiktok /> TikTok
               </a>
               <a
                 href="https://www.tripadvisor.com/Attraction_Review-g298085-d24191320-Reviews-Dragon_Spa_DaNang-Da_Nang.html"
