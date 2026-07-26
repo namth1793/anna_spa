@@ -5,27 +5,6 @@ import api from '../lib/api';
 import useSiteImages, { pickUrl } from '../lib/useSiteImages';
 import { IconCheck, IconPhone } from '../components/Icons';
 
-const SERVICE_KEYS = [
-  { key: 'thai_name', value: 'Thai Massage' },
-  { key: 'stone_name', value: 'Hot Stone Massage' },
-  { key: 'bamboo_name', value: 'Bamboo Massage' },
-  { key: 'aroma_name', value: 'Aroma Therapy' },
-  { key: 'herbal_name', value: 'Herbal Massage' },
-  { key: 'scrub_name', value: 'Body Scrub' },
-  { key: 'wrap_name', value: 'Body Wrap' },
-  { key: 'facial_name', value: 'Classic Facial' },
-  { key: 'anti_name', value: 'Anti-Aging Facial' },
-  { key: 'foot_name', value: 'Foot Massage' },
-  { key: 'head_name', value: 'Head & Shoulder Massage' },
-  { key: 'back_name', value: 'Back Massage' },
-  { key: 'mani_name', value: 'Manicure' },
-  { key: 'pedi_name', value: 'Pedicure' },
-  { key: 'apollo_name', value: 'Apollo Massage' },
-  { key: 'relax_name', value: 'Apollo Relaxation Package' },
-  { key: 'royal_name', value: 'Apollo Royal Package' },
-  { key: 'couple_name', value: 'Couples Spa Package' },
-];
-
 const DURATIONS = ['30', '45', '60', '75', '90', '105', '120', '165'];
 
 const TIMES = [
@@ -44,8 +23,7 @@ export default function Booking() {
   const siteImages = useSiteImages();
   const headerUrl = pickUrl(siteImages, 'booking_header', 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80');
   const pl = t('priceList', { returnObjects: true });
-  const PACKAGE_OPTIONS = (pl?.packages || []).map(p => ({ label: p.name, value: p.name }));
-  const SERVICES = [...PACKAGE_OPTIONS, ...SERVICE_KEYS.map(s => ({ label: t(`servicesPage.${s.key}`), value: s.value }))];
+  const SERVICES = (pl?.packages || []).map(p => ({ label: p.name, value: p.name }));
   const [form, setForm] = useState({
     name: '', phone: '', email: '', service: searchParams.get('service') || '',
     duration: '60', date: searchParams.get('date') || '', time: '', notes: '',
